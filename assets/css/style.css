@@ -1,0 +1,314 @@
+@font-face {
+    font-family: GlacialIndifference;
+    src: url("../fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GlacialIndifference-It;
+    src: url("../fonts/GlacialIndifference-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GlacialIndifference-B;
+    src: url("../fonts/GlacialIndifference-Bold.otf") format("opentype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: GlacialIndifference, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    font-size: 1.25rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: GlacialIndifference-B;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: GlacialIndifference-B;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: GlacialIndifference-B;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-family: GlacialIndifference-B;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+a {
+    color: #2fa5a8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: #8feff2;
+}
+
+.swiper-button-prev {
+    background-image: url("../images/circle-left-solid.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.swiper-button-next {
+    background-image: url("../images/circle-right-solid.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+.container {
+    padding: 100px 200px 100px 200px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    padding: 30px 200px 30px 200px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 999;
+    font-family: GlacialIndifference-B;
+}
+
+.logo {
+    height: 60px;
+}
+
+.banner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text {
+    text-align: center;
+    z-index: 10;
+}
+
+.pop-up {
+    animation: shadow 2s forwards;
+    text-shadow: 1px 1px 0px rgba(99, 8, 22, 1);
+}
+
+.background {
+    background: url('../images/lavamae.jpg');
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.layer {
+    background-color: rgba(199, 16, 46, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about {
+    width: 100vw;
+    background-color: white;
+    color: rgba(199, 16, 46);
+}
+
+.about-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    width: 45%;
+}
+
+.about-image {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.about-flex figure {
+    width: 45%;
+    margin: 0;
+}
+
+.attention {
+    font-family: GlacialIndifference-B;
+    color: #2fa5a8;
+}
+
+.service-list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
+    width: 100%;
+    background-color: white;
+    margin: 0 0 10px 0;
+    color: rgba(199, 16, 46);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.event-text {
+    width: 30%;
+}
+
+.event-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: bottom;
+}
+
+.partners {
+    color: white;
+}
+
+.swiper1 {
+    width: 100%;
+    height: 100px;
+}
+
+.swiper1-slide {
+    width: 300px !important;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: white;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.swiper1-slide a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper1-slide a img {
+    width: 100%;
+}
+
+.get-involved {
+    background-color: white;
+    color: rgba(199, 16, 46);
+}
+
+.get-involved-flex {
+    display: flex;
+    flex-direction: row;
+    flex-grow: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.get-involved-flex div {
+    width: 30%;
+    height: 500px;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+}
+
+.get-involved-flex img {
+    width: 100%;
+    height: 40%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.get-involved-flex .opportunity {
+    width: 100%;
+    padding: 0 15px 15px 15px;
+    height: auto;
+}
+
+.button {
+    margin: 15px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(199, 16, 46);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(255, 27, 65);
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.get-involved-button {
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+.swiper2 {
+    width: 100%;
+    height: fit-content;
+}
+
+.swiper2-slide {
+    height: 400px !important;
+    width: 300px !important;
+    position: relative;
+}
+
+.swiper2-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.swiper2-slide h4 {
+    position: absolute;
+    bottom: 0;
+    margin: 15px;
+    text-shadow: 0px 0px 20px #000000
+}
