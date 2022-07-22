@@ -81,7 +81,7 @@ a:hover {
 }
 
 .container {
-    padding: 100px 200px 100px 200px;
+    padding: 10vh 10vw 10vh 10vw;
 }
 
 div {
@@ -89,7 +89,7 @@ div {
 }
 
 .nav-bar {
-    padding: 30px 200px 30px 200px;
+    padding: 5vh 10vw 5vh 10vw;
     position: fixed;
     top: 0;
     display: flex;
@@ -241,17 +241,18 @@ div {
 .get-involved-flex {
     display: flex;
     flex-direction: row;
-    flex-grow: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.get-involved-flex .info-wrapper {
+    width: 30%;
+    height: fit-content;
+    background-color: #e5e5e5;
+    border-radius: 15px;
     position: relative;
 }
 
-.get-involved-flex div {
-    width: 30%;
-    height: 500px;
-    background-color: #e5e5e5;
-    border-radius: 15px;
-}
 
 .get-involved-flex img {
     width: 100%;
@@ -262,8 +263,19 @@ div {
 
 .get-involved-flex .opportunity {
     width: 100%;
-    padding: 0 15px 15px 15px;
-    height: auto;
+    padding: 0 15px 60px 15px;
+    min-height: 250px;
+}
+
+@media (max-width: 1000px) {
+    .get-involved-flex .info-wrapper {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .get-involved-flex img {
+        height: 300px;
+    }
 }
 
 .button {
@@ -307,6 +319,33 @@ div {
 }
 
 .swiper2-slide h4 {
+    position: absolute;
+    bottom: 0;
+    margin: 15px;
+    text-shadow: 0px 0px 20px #000000
+}
+
+.youth-leadership {
+    background-color: white;
+    color: rgba(199, 16, 46);
+}
+
+.swiper3 {
+    width: 100%;
+    height: fit-content;
+}
+
+.swiper3-slide {
+    height: 200px !important;
+    width: 300px !important;
+    color: white;
+    position: relative;
+    background: rgb(231,231,231);
+    background: linear-gradient(45deg, rgba(231,231,231,1) 0%, rgba(144,144,144,1) 100%);
+    border-radius: 15px;
+}
+
+.swiper3-slide h4 {
     position: absolute;
     bottom: 0;
     margin: 15px;
