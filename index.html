@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/font awesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
 
@@ -47,8 +48,10 @@
             <p class="about-text">The C-PUCV is a collaborative project led by 8 grassroot initiatives. These eight
                 organizations are:
                 <a class="link" href="https://www.bethechangeyyc.org/">BeTheChangeYYC</a>, <a class="link"
-                    href="http://www.aawear.org/">AAWEAR</a>, <a class="link" href="https://www.streetsisterssociety.com/">Street
-                    Sisters</a>, <a class="link" href="https://www.facebook.com/AngelsInActionAIA/">Angels in Action</a>, <a class="link"
+                    href="http://www.aawear.org/">AAWEAR</a>, <a class="link"
+                    href="https://www.streetsisterssociety.com/">Street
+                    Sisters</a>, <a class="link" href="https://www.facebook.com/AngelsInActionAIA/">Angels in
+                    Action</a>, <a class="link"
                     href="https://www.facebook.com/groups/727357457935474/">Sobercrew/A.I.M</a>, <a class="link"
                     href="https://www.facebook.com/HarvestHillsCaresCalgary/">Harvest Hill Cares</a>, and
                 Hearts for Humanity.
@@ -76,14 +79,32 @@
             Your browser does not support the video tag.
         </video>
         <h4>We will provide <span class="attention">FREE</span></h4>
-        <ul class="service-list">
-            <li>Clothing and hygiene</li>
-            <li>Haircuts, food and drinks</li>
-            <li>Health checkups</li>
-            <li>Housing and employment</li>
-            <li>Wellbeing and mental health checkups</li>
-            <li>Entertainment and fun</li>
-        </ul>
+        <button class="accordion" style="margin-top: 0">Clothing and hygiene</button>
+        <div class="panel">
+            <p>Details</p>
+        </div>
+
+        <button class="accordion">Haircuts, food and drinks</button>
+        <div class="panel">
+            <p>Details</p>
+        </div>
+
+        <button class="accordion">Health checkups</button>
+        <div class="panel">
+            <p>Details</p>
+        </div>
+        <button class="accordion">Housing and employment</button>
+        <div class="panel">
+            <p>Details</p>
+        </div>
+        <button class="accordion">Wellbeing and mental health checkups</button>
+        <div class="panel">
+            <p>Details</p>
+        </div>
+        <button class="accordion">Entertainment and fun</button>
+        <div class="panel">
+            <p>Details</p>
+        </div>
     </div>
     <div class="container get-involved">
         <h3>Get Involved</h3>
@@ -120,7 +141,8 @@
                             location stays clean and orderly, and thus ambassadors will have to pick up used needles and
                             trash
                             accordingly.</p>
-                        <a target = "_blank" href="assets/pdf/Safety and Wellness - volunteer letter.pdf" class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
+                        <a target="_blank" href="assets/pdf/Safety and Wellness - volunteer letter.pdf"
+                            class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
                     </div>
 
                     <button class="accordion">Wayfinders and Intake Specialists</button>
@@ -138,7 +160,8 @@
                             registration of guests through a Guest Pass, ensuring accurate and precise data collection
                             for survey
                             takers.</p>
-                        <a target = "_blank" href="assets/pdf/Wayfinding_Intake - volunteer letter.pdf" class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
+                        <a target="_blank" href="assets/pdf/Wayfinding_Intake - volunteer letter.pdf"
+                            class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
                     </div>
 
                     <button class="accordion">Medical First Response Central Team</button>
@@ -161,7 +184,8 @@
                             Medical First Responder, the Central Team will be able to take over control of the scene and
                             direct
                             available personnel on the next steps of action.</p>
-                        <a target = "_blank" href="assets/pdf/Central Medical First Response - volunteer letter.pdf" class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
+                        <a target="_blank" href="assets/pdf/Central Medical First Response - volunteer letter.pdf"
+                            class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
                     </div>
             </div>
             <div class="info-wrapper">
@@ -173,6 +197,14 @@
                         click "View Open Positions" for further details.</p>
                 </div>
                 <button id="partner" class="button get-involved-button">Contact Us</button>
+                <div class="modal" id="partner-modal">
+                    <button class="close"><i class="fa-solid fa-xmark"></i></button>
+                    <h3>Contact Us</h3>
+                    <p>You can contact us with any of the methods below.</p>
+                    <a class="job-button" href="mailto:example@gmail.com"><i
+                            class="fa-solid fa-envelope-circle-check"></i> example@gmail.com</a>
+                    <a class="job-button" href="tel:(000) 000-000"><i class="fa-solid fa-phone"></i> (000) 000-0000</a>
+                </div>
             </div>
             <div class="info-wrapper">
                 <img src="assets/images/donate.jpg">
@@ -183,7 +215,9 @@
                         contact us with the form found below if you are
                         interested.</p>
                 </div>
-                <a id="donate" class="button get-involved-button">Donate Now</a>
+                <a target="_blank"
+                    href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=KD33AE9MTPHQE&source=url"
+                    class="button get-involved-button">Donate Now</a>
             </div>
         </div>
     </div>

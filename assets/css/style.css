@@ -296,6 +296,7 @@ div {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -415,6 +416,7 @@ div {
     transition: 0.4s;
     font-size: 1rem;
     font-family: GlacialIndifference;
+    margin-top: 15px;
 }
 
 .active,
@@ -423,8 +425,7 @@ div {
 }
 
 .panel {
-    padding: 0 15px 15px 15px;
-    background-color: white;
+    padding: 0 15px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -437,6 +438,7 @@ div {
     color: white;
     border-radius: 5px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .job-button:hover {
@@ -479,6 +481,11 @@ div {
     .about-image-wrapper {
         width: 100%;
     }
+}
+
+
+video[poster] {
+    background-color: linear-gradient(45deg, rgba(231, 231, 231, 1) 0%, rgba(144, 144, 144, 1) 100%);
 }
 
 @media (max-width: 700px) {
