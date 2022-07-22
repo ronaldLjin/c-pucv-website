@@ -27,4 +27,4 @@ let x = setInterval(function () {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "See you next year!";
     }
-}, 1000);
+});
