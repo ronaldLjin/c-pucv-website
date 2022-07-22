@@ -13,6 +13,10 @@
     src: url("../fonts/GlacialIndifference-Bold.otf") format("opentype");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -98,9 +102,15 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     z-index: 999;
     font-family: GlacialIndifference-B;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
 }
 
 .logo {
@@ -430,7 +440,7 @@ div {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     font-size: 1rem;
-  }
+}
 
 .job-button {
     background-color: rgba(199, 16, 46);
@@ -481,11 +491,6 @@ div {
     .about-image-wrapper {
         width: 100%;
     }
-}
-
-
-video[poster] {
-    background-color: linear-gradient(45deg, rgba(231, 231, 231, 1) 0%, rgba(144, 144, 144, 1) 100%);
 }
 
 @media (max-width: 700px) {
