@@ -32,6 +32,7 @@
         <div class="layer">
         </div>
     </div>
+    <div id="mask"></div>
     <div class="container banner">
         <div class="banner-text">
             <h1>CALGARY <span class="pop-up">POP-UP</span> CARE VILLAGE</h1>
@@ -45,10 +46,10 @@
         <div class="about-flex">
             <p class="about-text">The C-PUCV is a collaborative project led by 8 grassroot initiatives. These eight
                 organizations are:
-                <a href="https://www.bethechangeyyc.org/">BeTheChangeYYC</a>, <a
-                    href="http://www.aawear.org/">AAWEAR</a>, <a href="https://www.streetsisterssociety.com/">Street
-                    Sisters</a>, <a href="https://www.facebook.com/AngelsInActionAIA/">Angels in Action</a>, <a
-                    href="https://www.facebook.com/groups/727357457935474/">Sobercrew/A.I.M</a>, <a
+                <a class="link" href="https://www.bethechangeyyc.org/">BeTheChangeYYC</a>, <a class="link"
+                    href="http://www.aawear.org/">AAWEAR</a>, <a class="link" href="https://www.streetsisterssociety.com/">Street
+                    Sisters</a>, <a class="link" href="https://www.facebook.com/AngelsInActionAIA/">Angels in Action</a>, <a class="link"
+                    href="https://www.facebook.com/groups/727357457935474/">Sobercrew/A.I.M</a>, <a class="link"
                     href="https://www.facebook.com/HarvestHillsCaresCalgary/">Harvest Hill Cares</a>, and
                 Hearts for Humanity.
                 <br>
@@ -60,7 +61,7 @@
             </p>
             <div class="about-image-wrapper">
                 <img class="about-image" src="assets/images/lavamae2.png">
-                <h4><a href="https://lavamaex.org/">LavaMae's</a> pop-up care village</h4>
+                <h4>LavaMae's pop-up care village</h4>
             </div>
         </div>
     </div>
@@ -91,23 +92,87 @@
                 <img src="assets/images/volunteer.jpg">
                 <div class="opportunity">
                     <h4>VOLUNTEER </h4>
-                    <p>We are in dire need of volunteers who are willing
-                        to dedicate their time to plan this event. Please
-                        contact us with the form found below if you are
-                        interested.</p>
+                    <p>We are in need of volunteers who are willing
+                        to dedicate their time to contribute to this event. Please
+                        click "View Open Positions" for further details.</p>
                 </div>
                 <button id="volunteer" class="button get-involved-button">View Open Positions</button>
+            </div>
+            <div class="modal" id="volunteer-modal">
+                <button class="close"><i class="fa-solid fa-xmark"></i></button>
+                <h3>Current Openings</h1>
+                    <button class="accordion" style="margin-top: 0">Safety and Wellness Ambassadors</button>
+                    <div class="panel">
+                        <p>Summary</p>
+                        <p class="job-description">Safety and Wellness Ambassadors will engage with
+                            guests in a non-confrontational and positive manner, ensuring personal security of everyone
+                            working
+                            and attending the event. These interactions can include ensuring everyone is abiding event
+                            rules,
+                            enforcing no drug use on site, performing referrals for individuals who are wanting to use
+                            the
+                            Safework SCS. Ambassadors will work with the Medical First Response team, either from St.
+                            John
+                            Ambulance or from a separate team of healthcare professionals, to ensure that individuals in
+                            medical
+                            distress are being properly looked after. In addition, Ambassadors will ensure the park and
+                            event
+                            location stays clean and orderly, and thus ambassadors will have to pick up used needles and
+                            trash
+                            accordingly.</p>
+                        <a target = "_blank" href="assets/pdf/Safety and Wellness - volunteer letter.pdf" class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
+                    </div>
+
+                    <button class="accordion">Wayfinders and Intake Specialists</button>
+                    <div class="panel">
+                        <p>Summary</p>
+                        <p class="job-description">Wayfinders and Intake Specialists will engage with guests in a
+                            non-confrontational and positive manner, ensuring all partnering agencies and guests’
+                            questions
+                            regarding event schedule and location are addressed. Specialists will staff entry/exit
+                            points, central
+                            information directory, exit gift booths, patrolling the parameters of the event, as well as
+                            performing
+                            outreaches within the vicinity of the event to attract guests. In addition, specialists are
+                            tasked with the
+                            registration of guests through a Guest Pass, ensuring accurate and precise data collection
+                            for survey
+                            takers.</p>
+                        <a target = "_blank" href="assets/pdf/Wayfinding_Intake - volunteer letter.pdf" class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
+                    </div>
+
+                    <button class="accordion">Medical First Response Central Team</button>
+                    <div class="panel">
+                        <p>Summary</p>
+                        <p class="job-description">The Medical First Response Central Team will serve as a backup
+                            medical team, on top of our
+                            St. John Ambulance Medical First Response partner. The responders will primarily be staffed
+                            within
+                            the First Aid station located adjacent/within the central information directory, and will be
+                            deployed if
+                            St.John Ambulance volunteers request additional professional healthcare support. In
+                            addition,
+                            responders will respond to additional medical emergencies if St.John Ambulance volunteers
+                            are
+                            unable to reach the casualty due to an ongoing medical emergency. It is expected that if
+                            St.John
+                            Ambulance volunteers determine that the situation of the medical emergency is beyond the
+                            scope of a
+                            Medical First Responder, the Central Team will be able to take over control of the scene and
+                            direct
+                            available personnel on the next steps of action.</p>
+                        <a target = "_blank" href="assets/pdf/Central Medical First Response - volunteer letter.pdf" class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
+                    </div>
             </div>
             <div class="info-wrapper">
                 <img src="assets/images/partner.jpg">
                 <div class="opportunity">
                     <h4>PARTNER WITH US</h4>
-                    <p>We are in dire need of volunteers who are willing
-                        to dedicate their time to plan this event. Please
-                        contact us with the form found below if you are
-                        interested.</p>
+                    <p>We are in need of volunteers who are willing
+                        to dedicate their time to contribute to this event. Please
+                        click "View Open Positions" for further details.</p>
                 </div>
-                <button href="#" class="button get-involved-button">Contact Us</button>
+                <button id="partner" class="button get-involved-button">Contact Us</button>
             </div>
             <div class="info-wrapper">
                 <img src="assets/images/donate.jpg">
@@ -125,7 +190,7 @@
     <div class="container partners">
         <h3>Our Partners</h3>
         <p>This event would not be possible without our generous partners. If you are interesting in working with us,
-            please contact us at <a href="mailto:example@mail.com">example@mail.com</a> or <a
+            please contact us at <a class="link" href="mailto:example@mail.com">example@mail.com</a> or <a class="link"
                 href="tel:xxx-xxx-xxxx">(xxx) xxx-xxxx</a>.</p>
         <h4 style="text-align: center;">Individual Contributors</h4>
         <div class="swiper swiper2">
@@ -221,6 +286,8 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

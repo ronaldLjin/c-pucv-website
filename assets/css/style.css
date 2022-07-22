@@ -46,14 +46,17 @@ p {
     font-size: 1.25rem;
 }
 
-a {
-    color: #2fa5a8;
-    text-decoration: none;
+button {
+    font-family: GlacialIndifference;
 }
 
-a:hover {
+.link {
+    text-decoration: none;
+    color: #2fa5a8;
+}
+
+.link:hover {
     text-decoration: underline;
-    text-decoration-color: #8feff2;
 }
 
 .swiper-button-prev {
@@ -168,6 +171,7 @@ div {
     text-shadow: 0px 0px 20px #000000;
     color: white;
 }
+
 .about-image {
     border-radius: 15px;
     object-fit: cover;
@@ -346,8 +350,8 @@ div {
     width: 300px !important;
     color: white;
     position: relative;
-    background: rgb(231,231,231);
-    background: linear-gradient(45deg, rgba(231,231,231,1) 0%, rgba(144,144,144,1) 100%);
+    background: rgb(231, 231, 231);
+    background: linear-gradient(45deg, rgba(231, 231, 231, 1) 0%, rgba(144, 144, 144, 1) 100%);
     border-radius: 15px;
 }
 
@@ -358,13 +362,112 @@ div {
     text-shadow: 0px 0px 20px #000000
 }
 
+#mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
+    margin: 10vh 10vw 10vh 10vw;
+    z-index: 1001;
+    border-radius: 15px;
+    padding: 30px;
+    overflow-y: auto;
+    display: none;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: rgba(199, 16, 46);
+    transition: color 0.2s;
+}
+
+
+.accordion {
+    background-color: #e5e5e5;
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1rem;
+    font-family: GlacialIndifference;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 15px 15px 15px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 1rem;
+  }
+
+.job-button {
+    background-color: rgba(199, 16, 46);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.job-button:hover {
+    background-color: rgb(255, 27, 65);
+    transition: background-color 0.2s;
+}
+
+.accordion:after {
+    content: 'Details';
+    /* Unicode character for "plus" sign (+) */
+    color: rgba(199, 16, 46);
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "Close";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.job-description {
+    color: #444;
+    font-size: 1rem;
+}
 
 @media (max-width: 1000px) {
     .get-involved-flex .info-wrapper {
         width: 100%;
         margin-bottom: 30px;
     }
-    
+
     .get-involved-flex img {
         height: 300px;
     }
@@ -386,6 +489,7 @@ div {
     .banner-text h2 {
         font-size: 1.5rem;
     }
+
     .banner-text h3 {
         font-size: 1.25rem;
     }
