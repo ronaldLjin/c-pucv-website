@@ -162,7 +162,7 @@ div {
         display: block;
     }
 
-    #menu{
+    #menu {
         display: block !important;
     }
 
@@ -218,10 +218,6 @@ div {
     z-index: 10;
 }
 
-.pop-up {
-    animation: shadow 2s forwards;
-    text-shadow: 1px 1px 0px rgba(99, 8, 22, 1);
-}
 
 .background {
     background: url('../images/lavamae.jpg');
@@ -461,6 +457,38 @@ div {
     text-shadow: 0px 0px 20px #000000
 }
 
+.swiper4 {
+    width: 100%;
+    height: 100px;
+}
+
+.swiper4-slide {
+    width: auto !important;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: white;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.swiper4-slide a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper4-slide a img {
+    height: 100%;
+    width: auto;
+}
+
+
 #mask {
     position: fixed;
     top: 0;
@@ -543,6 +571,10 @@ div {
     font-size: 1rem;
 }
 
+.panel p {
+    font-size: 1rem;
+}
+
 .job-button {
     background-color: rgba(199, 16, 46);
     padding: 10px;
@@ -572,8 +604,53 @@ div {
 
 .job-description {
     color: #444;
+}
+
+
+.free-stuff {
+    background-color: white;
+}
+
+footer {
+    background-color: rgba(99, 8, 22, 1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+
+footer p {
     font-size: 1rem;
 }
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-desc {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+footer li {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.copyright {
+    padding: 15px 10vw 15px 10vw;
+    font-size: 1rem;
+    border-top: 1px solid rgba(199, 16, 46, 0.5);
+    background-color: rgba(99, 8, 22, 1);
+}
+
 
 @media (max-width: 1000px) {
     .get-involved-flex .info-wrapper {

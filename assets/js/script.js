@@ -1,9 +1,3 @@
-let text_shadow = '';
-for (let p = 0; p < 100; p++) {
-    text_shadow += (text_shadow ? ', ' : '') + 2 * p + 'px ' + 2 * p + 'px 1px rgba(99,8,22,' + 1 / (p * p / 400 + 1) + ')';
-}
-document.head.innerHTML += "<style> @keyframes shadow {100%{text-shadow: " + text_shadow + ";}} </style>";
-
 let eventDate = new Date("Aug 17, 2022 12:00:00").getTime();
 
 let x = setInterval(function () {
