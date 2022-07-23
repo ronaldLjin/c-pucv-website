@@ -31,9 +31,11 @@ let x = setInterval(function () {
 
 let navBar = document.querySelector(".nav-bar")
 let logo = navBar.querySelector(".logo")
-let menuItems = navBar.querySelectorAll("a")
-let navBarLinks = document.querySelector(".nav-bar-links")
-let mask = document.getElementById("mask")
+let menuItems = document.querySelectorAll(".menu-item")
+let navBarLinksMobile = document.querySelector(".nav-bar-links-mobile")
+let mask = document.getElementById("mask2")
+let menu = document.getElementById("menu")
+let closeNavButton = document.getElementById("close-nav")
 document.addEventListener("scroll", () => {
     if (window.pageYOffset === 0) {
         navBar.style.backgroundColor = "transparent"
@@ -51,4 +53,29 @@ document.addEventListener("scroll", () => {
         })
         logo.src = "assets/images/logo.png"
     }
+})
+
+const closeMenu = function() {
+    navBarLinksMobile.classList.remove("animate__animated", "animate__slideInRight", "animate__faster")
+    navBarLinksMobile.classList.add("animate__animated", "animate__slideOutRight", "animate__faster")
+    mask.classList.remove("animate__animated", "animate__fadeIn", "animate__faster")
+    mask.classList.add("animate__animated", "animate__fadeOut", "animate__faster")
+
+    setTimeout(function () {
+        mask.style.display = "none"
+        navBarLinksMobile.style.display = "none"
+    }, 500)
+}
+
+menu.addEventListener("click", () => {
+    navBarLinksMobile.classList.remove("animate__animated", "animate__slideOutRight", "animate__faster")
+    navBarLinksMobile.classList.add("animate__animated", "animate__slideInRight", "animate__faster")
+    navBarLinksMobile.style.display = "flex"
+    mask.classList.remove("animate__animated", "animate__fadeOut", "animate__faster")
+    mask.classList.add("animate__animated", "animate__fadeIn", "animate__faster")
+    mask.style.display = "block"
+
+
+    mask.addEventListener("click", closeMenu)
+    closeNavButton.addEventListener("click",closeMenu)
 })
