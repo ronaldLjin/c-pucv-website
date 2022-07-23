@@ -11,9 +11,10 @@ let x = setInterval(function () {
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-
+    document.getElementById("days").innerHTML = days
+    document.getElementById("hours").innerHTML = hours
+    document.getElementById("minutes").innerHTML = minutes
+    document.getElementById("seconds").innerHTML = seconds
     if (distance < 0 && distance > -21600000) {
         document.getElementById("countdown").innerHTML = "Come drop by, We are open!";
     }
@@ -49,7 +50,7 @@ document.addEventListener("scroll", () => {
     }
 })
 
-const closeMenu = function() {
+const closeMenu = function () {
     navBarLinksMobile.classList.remove("animate__animated", "animate__slideInRight", "animate__faster")
     navBarLinksMobile.classList.add("animate__animated", "animate__slideOutRight", "animate__faster")
     mask.classList.remove("animate__animated", "animate__fadeIn", "animate__faster")
@@ -71,5 +72,5 @@ menu.addEventListener("click", () => {
 
 
     mask.addEventListener("click", closeMenu)
-    closeNavButton.addEventListener("click",closeMenu)
+    closeNavButton.addEventListener("click", closeMenu)
 })
