@@ -28,3 +28,27 @@ let x = setInterval(function () {
         document.getElementById("countdown").innerHTML = "See you next year!";
     }
 });
+
+let navBar = document.querySelector(".nav-bar")
+let logo = navBar.querySelector(".logo")
+let menuItems = navBar.querySelectorAll("a")
+let navBarLinks = document.querySelector(".nav-bar-links")
+let mask = document.getElementById("mask")
+document.addEventListener("scroll", () => {
+    if (window.pageYOffset === 0) {
+        navBar.style.backgroundColor = "transparent"
+        navBar.style.boxShadow = "none"
+        menuItems.forEach((e) => {
+            e.style.color = "white"
+        })
+        logo.src = "assets/images/logo-white.png"
+    } else {
+        navBar.style.backgroundColor = "white"
+        navBar.style.boxShadow = "rgb(100 100 111 / 20%) 0px 7px 29px 0px"
+        navBar.style.transition = "all 0.2s"
+        menuItems.forEach((e) => {
+            e.style.color = "rgba(199, 16, 46)"
+        })
+        logo.src = "assets/images/logo.png"
+    }
+})

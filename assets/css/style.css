@@ -96,7 +96,7 @@ div {
 }
 
 .nav-bar {
-    padding: 5vh 10vw 5vh 10vw;
+    padding: 3vh 10vw 3vh 10vw;
     position: fixed;
     top: 0;
     display: flex;
@@ -113,8 +113,71 @@ div {
     color: white;
 }
 
+.nav-bar-links {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .logo {
     height: 60px;
+}
+
+#menu {
+    position: absolute;
+    right: 10vw;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: none !important;
+}
+
+.close-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 1100px) {
+
+    .close-nav {
+        display: block;
+    }
+
+    #menu{
+        display: block !important;
+    }
+
+    .nav-bar {
+        display: block;
+    }
+
+    .nav-bar-links {
+        width: 300px;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background-color: white;
+        padding: 30px;
+        padding-top: 115.5px;
+        display: none;
+        z-index: 1001;
+    }
+
+    .nav-bar-links a {
+        margin-bottom: 15px;
+        color: rgba(199, 16, 46);
+    }
 }
 
 .banner {
@@ -406,6 +469,7 @@ div {
     background: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: black;
 }
 
 .close:hover {
