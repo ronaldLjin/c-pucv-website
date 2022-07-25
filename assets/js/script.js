@@ -11,16 +11,18 @@ let x = setInterval(function () {
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerHTML = days
-    document.getElementById("hours").innerHTML = hours
-    document.getElementById("minutes").innerHTML = minutes
-    document.getElementById("seconds").innerHTML = seconds
-    if (distance < 0 && distance > -21600000) {
+    if (distance > 0) {
+        document.getElementById("days").innerHTML = days
+        document.getElementById("hours").innerHTML = hours
+        document.getElementById("minutes").innerHTML = minutes
+        document.getElementById("seconds").innerHTML = seconds
+    }
+    else if (distance < 0 && distance > -21600000) {
         document.getElementById("countdown").innerHTML = "Come drop by, We are open!";
     }
     else if (distance < -21600000) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "See you next year!";
+        document.getElementById("countdown").textContent = "The event is over. See you next year!";
     }
 });
 
