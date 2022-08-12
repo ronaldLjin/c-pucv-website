@@ -29,6 +29,7 @@ let x = setInterval(function () {
 let navBar = document.querySelector(".nav-bar")
 let logo = navBar.querySelector(".logo")
 let menuItems = document.querySelectorAll(".menu-item")
+let donateButton = document.getElementById("donate-button")
 let navBarLinksMobile = document.querySelector(".nav-bar-links-mobile")
 let mask = document.getElementById("mask2")
 let menu = document.getElementById("menu")
@@ -40,6 +41,7 @@ document.addEventListener("scroll", () => {
         menuItems.forEach((e) => {
             e.style.color = "white"
         })
+        donateButton.classList.remove("red-button")
         logo.src = "assets/images/logo-white.png"
     } else {
         navBar.style.backgroundColor = "white"
@@ -48,6 +50,7 @@ document.addEventListener("scroll", () => {
         menuItems.forEach((e) => {
             e.style.color = "rgba(199, 16, 46)"
         })
+        donateButton.classList.add("red-button")
         logo.src = "assets/images/logo.png"
     }
 })

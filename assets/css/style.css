@@ -120,9 +120,10 @@ div {
 }
 
 .nav-bar-links {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav-bar-links-mobile {
@@ -733,6 +734,26 @@ footer li {
 
 video[poster] {
     object-fit: cover;
+}
+
+.nav-bar-links .donate-button {
+    background-color: white;
+    color: rgba(199, 16, 46);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-bar-links-mobile .donate-button {
+    background-color: rgba(199, 16, 46);
+    padding: 15px;
+    color: white !important;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+.red-button {
+    background-color: rgba(199, 16, 46) !important;
+    color: white !important;
 }
 
 @media (max-width: 1000px) {
