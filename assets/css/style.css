@@ -613,6 +613,7 @@ div {
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
+    margin: 7.5px;
 }
 
 .job-button:hover {
