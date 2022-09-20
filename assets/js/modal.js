@@ -35,8 +35,3 @@ const partner = document.getElementById("partner")
 partner.addEventListener("click", () => {
     displayModal("partner")
 })
-
-const donate = document.getElementById("donate")
-donate.addEventListener("click", () => {
-    displayModal("donate")
-})
