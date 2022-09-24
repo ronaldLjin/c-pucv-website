@@ -677,6 +677,10 @@ div {
     margin: 0;
 }
 
+.team-flex h5 {
+    font-family: GlacialIndifference-B;
+}
+
 footer {
     background-color: rgba(99, 8, 22, 1);
     display: flex;
