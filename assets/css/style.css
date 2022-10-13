@@ -922,3 +922,18 @@ mark {
     height: 60px;
     margin: 30px;
 }
+
+@media (max-width: 500px) {
+    .media-feature-logos {
+        align-items: center;
+    }
+
+    .media-feature-logos a {
+        width: 70%;
+    }
+    .media-feature-logos img {
+        width: 100%;
+        height: auto;
+        margin: 30px 0 30px 0;
+    }
+}
