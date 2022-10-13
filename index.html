@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -25,22 +25,22 @@
 <body>
     <!-- Nav Bar -->
     <div class="nav-bar">
-        <a href="#banner"><img src="assets/images/logo-white.png" alt="Calgary Pop-Up Care Village Logo"
+        <a href="index.html#banner"><img src="assets/images/logo-white.png" alt="Calgary Pop-Up Care Village Logo"
                 class="logo"></a>
         <div class="nav-bar-links">
-            <a class="menu-item" href="#about">
+            <a class="menu-item" href="index.html#about">
                 About
             </a>
-            <a class="menu-item" href="#event">
+            <a class="menu-item" href="index.html#event">
                 The Event
             </a>
-            <a class="menu-item" href="#get-involved">
+            <a class="menu-item" href="index.html#get-involved">
                 Get Involved
             </a>
-            <a class="menu-item" href="#partners">
+            <a class="menu-item" href="index.html#partners">
                 Our Partners
             </a>
-            <a class="menu-item" href="#team">
+            <a class="menu-item" href="index.html#team">
                 Our Team
             </a>
             <a target="_blank" href="https://www.paypal.com/donate/?campaign_id=VTM8XFQFVV2RJ" class="donate-button"
@@ -52,39 +52,38 @@
     </div>
     <div class="nav-bar-links-mobile">
         <button id="close-nav"><i class="fa-solid fa-xmark"></i></button>
-        <a href="#about">
+        <a href="index.html#about">
             About
         </a>
-        <a href="#event">
+        <a href="index.html#event">
             The Event
         </a>
-        <a href="#get-involved">
+        <a href="index.html#get-involved">
             Get Involved
         </a>
-        <a href="#partners">
+        <a href="index.html#partners">
             Our Partners
         </a>
-        <a href="#team">
+        <a href="index.html#team">
             Our Team
         </a>
         <a target="_blank" href="https://www.paypal.com/donate/?campaign_id=VTM8XFQFVV2RJ" class="donate-button">
             Donate
         </a>
     </div>
-    <!-- Banner -->
-    <div class="background">
-        <div class="layer">
-        </div>
-    </div>
     <div id="mask"></div>
     <div id="mask2"></div>
     <div class="container banner" id="banner">
         <div class="banner-text">
-            <h1 class="animate__animated animate__zoomIn">2ND CALGARY <span>POP-UP</span> CARE VILLAGE</h1>
-            <h2>Jan/Feb, 2023: 12 PM - 6 PM</h2>
-            <h3>Olympic Plaza (228 8 Ave SW)</h3>
-            <div id="countdown">
-                <!-- <div>
+            <h1 style=" text-transform: uppercase; color: white; text-shadow: 0px 0px 20px #000000;">2nd Calgary
+                <span>Pop-Up</span> Care Village
+            </h1>
+            <p style="text-shadow: 0px 0px 20px #000000;">The Calgary Pop-Up Care Village is a festival for anyone experiencing systemic vulnerabilities such as
+                homelessness and addiction.</p>
+            <!-- <p><i class="fa-solid fa-calendar-days"></i> Jan/Feb, 2023: 12 PM - 6 PM</p>
+            <p><i class="fa-solid fa-location-dot"></i> Olympic Plaza (228 8 Ave SW)</p> -->
+            <!-- <div id="countdown" style="margin-bottom: 30px;">
+                <div>
                     <h4 id="days"></h4>
                     <p class="time-unit">Days</p>
                 </div>
@@ -99,13 +98,57 @@
                 <div>
                     <h4 id="seconds"></h4>
                     <p class="time-unit">Sec</p>
-                </div> -->
-                <p>Exact date TBD</p>
-            </div>
+                </div>
+            </div> -->
+            <a class="button" style="margin-top: 15px; box-shadow:  0px 0px 20px #000000;" href="09-27-2022.html">Latest Event Recap <i
+                    class="fa-sharp fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
     <div class="container about" id="about">
-        <h3>About The Calgary Pop-Up Care Village</h3>
+        <div class="event-info">
+            <div class="event-info-item">
+                <div id="countdown">
+                    <div>
+                        <h4 id="days">?</h4>
+                        <p class="time-unit">Days</p>
+                    </div>
+                    <div>
+                        <h4 id="hours">?</h4>
+                        <p class="time-unit">Hours</p>
+                    </div>
+                    <div>
+                        <h4 id="minutes">?</h4>
+                        <p class="time-unit">Min</p>
+                    </div>
+                    <div>
+                        <h4 id="seconds">?</h4>
+                        <p class="time-unit">Sec</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event-info-item">
+                <i class="fa-solid fa-location-dot" style="color: rgba(199, 16, 46, 0.5)"></i>
+                <div>
+                    <h3>Olympic Plaza</h3>
+                    <p>228 8 Ave SW</p>
+                </div>
+            </div>
+            <div class="event-info-item">
+                <i class="fa-solid fa-calendar-days" style="color: rgba(199, 16, 46, 0.5)"></i>
+                <div>
+                    <h3>Jan/Feb, 2023</h3>
+                    <p>Date TBD</p>
+                </div>
+            </div>
+            <div class="event-info-item">
+                <i class="fa-solid fa-users" style="color: rgba(199, 16, 46, 0.5)"></i>
+                <div>
+                    <h3>600+ guests</h3>
+                    <p>At each event</p>
+                </div>
+            </div>
+        </div>
+        <h1>About The Calgary Pop-Up Care Village</h1>
         <div class="about-flex">
             <div class="about-text">
                 <p>The C-PUCV is a collaborative project led by seven grassroot initiatives. These seven
@@ -130,21 +173,19 @@
                 </p>
             </div>
             <div class="about-image-wrapper">
-                <img class="about-image" src="assets/images/lavamae2.png">
-                <h4>LavaMae's pop-up care village</h4>
+                <video style="border-radius: 15px;" width="100%" poster="assets/images/thumbnail.png" controls>
+                    <source src="assets/ videos/Updated C-PUCV Promotional Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
     <div class="container event" id="event">
-        <h3>The Event</h3>
-        <p>Our second C-PUCV will take place some time during <span class="attention">Jan/Feb, 2023</span> (yet to be confirmed), at <span
-                class="attention">Olympic Plaza (228 8 Ave SW)</span>. The festival will begin at
+        <h1>The Event</h1>
+        <p>Our second C-PUCV will take place some time during <span class="attention">Jan/Feb, 2023</span> (yet to be
+            confirmed), at <span class="attention">Olympic Plaza (228 8 Ave SW)</span>. The festival will begin at
             <span class="attention">12 PM</span> and end at <span class="attention">6 PM</span>.
         </p>
-        <video style="border-radius: 15px;" width="100%" poster="assets/images/thumbnail.png" controls>
-            <source src="assets/ videos/Updated C-PUCV Promotional Video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
         <h4>We will provide <span class="attention">FREE</span></h4>
         <button class="accordion free-stuff">Equitable clothing and hygiene access</button>
         <div class="panel">
@@ -210,7 +251,7 @@
                 addition, we will be hosting random prize draws throughout the event and impromptu team activities for
                 any guests who are interested. </p>
         </div>
-        <h4>
+        <!-- <h4>
             Information Posters
         </h4>
         <ul class="posters">
@@ -226,10 +267,10 @@
                     download="landscape-a4">Landscape A4 (.pdf)</a></li>
             <li><a class="link" href="assets/posters/C-PUCV Posters (A4).pdf" download="portrait-a4">Portrait A4
                     (.pdf)</a></li>
-        </ul>
+        </ul> -->
     </div>
     <div class="container get-involved" id="get-involved">
-        <h3>Get Involved</h3>
+        <h1>Get Involved</h1>
         <div class="get-involved-flex">
             <div class="info-wrapper">
                 <img src="assets/images/volunteer.jpg">
@@ -345,7 +386,7 @@
         </div>
     </div>
     <div class="container partners" id="partners">
-        <h3>Our Partners</h3>
+        <h1>Our Partners</h1>
         <p>This event would not be possible without our generous partners. If you are interesting in working with us,
             please contact us at <a class="link" href="mailto:c-pucv@billzheng.ca">c-pucv@billzheng.ca</a> or <a
                 class="link" href="tel:403-477-7280">(403) 477-7280</a>.</p>
@@ -375,9 +416,9 @@
                             src="assets/images/sponsors/rental-brothers-logo.png"></a></div>
             </div>
 
-            <!-- If we need navigation buttons -->
+            <!-- If we need navigation buttons
             <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-next"></div> -->
         </div>
         <h4>
             Partners
@@ -450,12 +491,12 @@
                 </div>
             </div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
         </div>
     </div>
     <div class="container youth-leadership" id="team">
-        <h3>Team</h3>
+        <h1>Team</h1>
         <p>The C-PUCV is a collaborative project led by 7 grassroot initiatives. These seven organizations are:
             BeTheChangeYYC, AAWEAR, Angels in Action, Sobercrew/A.I.M, Harvest Hill Cares, and Hearts
             for Humanity.</p>
@@ -560,11 +601,11 @@
         <div>
             <span style="font-family: GlacialIndifference-B;">Navigation</span>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#event">The Event</a></li>
-                <li><a href="#get-involved">Get Involved</a></li>
-                <li><a href="#partners">Our Partners</a></li>
-                <li><a href="#team">Our Team</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#event">The Event</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="index.html#partners">Our Partners</a></li>
+                <li><a href="index.htmlteam">Our Team</a></li>
             </ul>
         </div>
         <div>
@@ -597,6 +638,7 @@
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="assets/js/navbar.js"></script>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",

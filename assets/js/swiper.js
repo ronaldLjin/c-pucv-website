@@ -4,10 +4,12 @@ const swiper1 = new Swiper('.swiper1', {
   spaceBetween: 30,
 
   // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
   },
+  slidesPerView: 'auto',
 });
 
 const swiper3 = new Swiper('.swiper3', {
@@ -28,6 +30,20 @@ const swiper4 = new Swiper('.swiper4', {
   spaceBetween: 30,
 
   // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiper5 = new Swiper('.swiper5', {
+  // Navigation arrows
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
