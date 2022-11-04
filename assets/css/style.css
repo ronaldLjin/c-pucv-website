@@ -266,28 +266,12 @@ div {
     flex-wrap: wrap-reverse;
 }
 
-.about-text {
-    width: 45%;
-}
 
-.about-image-wrapper {
-    width: 45%;
-    position: relative;
-}
-
-.about-image-wrapper h4 {
-    position: absolute;
-    bottom: 0;
-    margin: 15px;
-    text-shadow: 0px 0px 20px #000000;
-    color: white;
-}
-
-.about-image {
-    border-radius: 15px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.about-video {
+    border-radius: 15px; 
+    float: right; 
+    margin: 0 0 15px 15px;
+    width: 50%;
 }
 
 .attention {
@@ -780,8 +764,9 @@ video[poster] {
         height: 300px;
     }
 
-    .about-text {
+    .about-video {
         width: 100%;
+        margin: 0 0 15px 0;
     }
 
     .about-image-wrapper {
