@@ -576,11 +576,11 @@ div {
     border: none;
     outline: none;
     transition: 0.4s;
-    font-size: 1rem;
     font-family: GlacialIndifference, sans-serif;
     margin-top: 15px;
     border-radius: 15px;
     color: black;
+    font-size: 1.25rem;
 }
 
 .active,
@@ -593,11 +593,6 @@ div {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    font-size: 1rem;
-}
-
-.panel p {
-    font-size: 1rem;
 }
 
 .job-button {
