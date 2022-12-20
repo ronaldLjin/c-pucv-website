@@ -28,12 +28,22 @@
         <a href="index.html#banner"><img src="assets/images/logo-white.png" alt="Calgary Pop-Up Care Village Logo"
                 class="logo"></a>
         <div class="nav-bar-links">
-            <a class="menu-item" href="index.html#about">
-                About
-            </a>
-            <a class="menu-item" href="index.html#event">
-                The Event
-            </a>
+            <div>
+                <a class="menu-item" href="index.html#about">
+                    About <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="history.html">History</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="menu-item" href="index.html#event">
+                    The Event <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="09-27-2022.html">09/27/2022 Recap</a></li>
+                </ul>
+            </div>
             <a class="menu-item" href="index.html#get-involved">
                 Get Involved
             </a>
@@ -52,12 +62,30 @@
     </div>
     <div class="nav-bar-links-mobile">
         <button id="close-nav"><i class="fa-solid fa-xmark"></i></button>
-        <a href="index.html#about">
-            About
-        </a>
-        <a href="index.html#event">
-            The Event
-        </a>
+        <div class="mobile-parent">
+            <span>
+                <a href="index.html#about">
+                    About
+                </a>
+                <button onclick="showContents('about-dropdown')" id="about-dropdown-button"><i
+                        class="fa-solid fa-plus"></i></button>
+            </span>
+            <ul class="mobile-dropdown-content" id="about-dropdown">
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </div>
+        <div class="mobile-parent">
+            <span>
+                <a href="index.html#event">
+                    The Event
+                </a>
+                <button onclick="showContents('event-dropdown')" id="event-dropdown-button"><i
+                        class="fa-solid fa-plus"></i></button>
+            </span>
+            <ul class="mobile-dropdown-content" id="event-dropdown">
+                <li><a href="09-27-2022.html">09/27/2022 Recap</a></li>
+            </ul>
+        </div>
         <a href="index.html#get-involved">
             Get Involved
         </a>
@@ -253,6 +281,70 @@
         </div>
     </div>
 
+    <div class="container youth-leadership" id="team" style="background-color: white">
+        <h1>Team</h1>
+        <div class="team-flex">
+            <div>
+                <h4>Leadership Team</h4>
+                <ul>
+                    <li>
+                        <h5>Bill Zheng</h5>
+                        <p>Coordinator, Assistant Team Lead at BeTheChangeYYC</p>
+                    </li>
+                    <li>
+                        <h5>Hanna Woodward</h5>
+                        <p>Program Coordinator at BeTheChangeYYC</p>
+                    </li>
+                    <li>
+                        <h5>Chaz Smith</h5>
+                        <p>CEO and Founder of BeTheChangeYYC</p>
+                    </li>
+                    <li>
+                        <h5>Kristen Baranieski</h5>
+                        <p>Wayfinders and intake specialist team lead, senior team lead at BeTheChangeYYC</p>
+                    </li>
+                    <li>
+                        <h5>Olivia Levy</h5>
+                        <p>Medical first responder central team lead, team lead at BeTheChangeYYC</p>
+                    </li>
+                    <li>
+                        <h5>Jojo Marie</h5>
+                        <p>Safety and wellness ambassadors team lead, outreach coordinator at AAWEAR</p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>Youth Involvement</h4>
+                <ul>
+                    <li>
+                        <h5>Weilan Zhang</h5>
+                        <p>Graphic design team lead</p>
+                    </li>
+                    <li>
+                        <h5>Allison Yang</h5>
+                        <p>Graphic designer</p>
+                    </li>
+                    <li>
+                        <h5>Grace Song</h5>
+                        <p>Graphic designer</p>
+                    </li>
+                    <li>
+                        <h5>Grace Liu</h5>
+                        <p>Graphic designer</p>
+                    </li>
+                    <li>
+                        <h5>Alvi Zaman</h5>
+                        <p>Graphic designer</p>
+                    </li>
+                    <li>
+                        <h5>Ronald Jin</h5>
+                        <p>Web developer/designer</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <footer class="container">
         <p class="footer-desc">Modelled after LavaMae’s Pop-Up Care Village in the San Francisco Bay Area, the
             Calgary
@@ -272,15 +364,9 @@
         <div>
             <span style="font-family: GlacialIndifference-B;">Related Organizations</span>
             <ul>
-                <li><a target="_blank" href="http://www.aawear.org/">AAWEAR</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/groups/727357457935474/">A.I.M.</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/AngelsInActionAIA/">Angels In Action</a></li>
                 <li><a target="_blank" href="https://www.bethechangeyyc.org/">BeTheChangeYYC</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/HarvestHillsCaresCalgary/">Harvest Hills
-                        Cares</a>
-                </li>
-                <li><a target="_blank" href="https://heartsforhumanityltd.com/">Hearts for Humanity</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/groups/727357457935474/">Sober Crew</a></li>
+                <li><a target="_blank" href="https://safelinkalberta.ca/">SafeLink Alberta</a></li>
+                <li><a target="_blank" href="https://lavamaex.org/">LavaMaeX</a></li>
             </ul>
         </div>
         <div>
@@ -294,9 +380,44 @@
     </footer>
     <div class="copyright">©2022 Calgary Pop-Up Care Village. Web design and development by <a target="_blank"
             href="https://ronald-jin.vercel.app/" style="color: white">Ronald Jin</a>.</div>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/navbar.js"></script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "Calgary Pop-Up Care Village",
+          "startDate": "2022-09-27T112:00",
+          "endDate": "2022-09-27T118:00",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Kerby Centre",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1133 7 Ave SW",
+              "addressLocality": "Calgary",
+              "postalCode": "T2P 2M5",
+              "addressRegion": "AB",
+              "addressCountry": "CA"
+            }
+          },
+          "image": [
+            "https://c-pucv.ca/assets/images/logo.png"
+           ],
+          "description": "The C-PUCV is a festival providing access to services such as healthcare, clothing, haircuts, food and more for those experiencing vulnerabilities in Calgary like homelessness and addiction.",
+          "organizer": {
+            "@type": "Organization",
+            "name": "Calgary Pop-Up Care Village",
+            "url": "https://c-pucv.ca/"
+          }
+        }
+        </script>
 </body>
 
 </html>

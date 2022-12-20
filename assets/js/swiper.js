@@ -4,7 +4,6 @@ const swiper1 = new Swiper('.swiper1', {
   spaceBetween: 30,
 
   // Navigation arrows
-  loop: true,
   autoplay: {
     delay: 2000,
     disableOnInteraction: false
@@ -38,7 +37,6 @@ const swiper4 = new Swiper('.swiper4', {
 
 const swiper5 = new Swiper('.swiper5', {
   // Navigation arrows
-  loop: true,
   autoplay: {
     delay: 2000,
     disableOnInteraction: false

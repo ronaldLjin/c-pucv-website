@@ -28,12 +28,22 @@
         <a href="index.html#banner"><img src="assets/images/logo-white.png" alt="Calgary Pop-Up Care Village Logo"
                 class="logo"></a>
         <div class="nav-bar-links">
-            <a class="menu-item" href="index.html#about">
-                About
-            </a>
-            <a class="menu-item" href="index.html#event">
-                The Event
-            </a>
+            <div>
+                <a class="menu-item" href="index.html#about">
+                    About <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="history.html">History</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="menu-item" href="index.html#event">
+                    The Event <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="09-27-2022.html">09/27/2022 Recap</a></li>
+                </ul>
+            </div>
             <a class="menu-item" href="index.html#get-involved">
                 Get Involved
             </a>
@@ -52,12 +62,30 @@
     </div>
     <div class="nav-bar-links-mobile">
         <button id="close-nav"><i class="fa-solid fa-xmark"></i></button>
-        <a href="index.html#about">
-            About
-        </a>
-        <a href="index.html#event">
-            The Event
-        </a>
+        <div class="mobile-parent">
+            <span>
+                <a href="index.html#about">
+                    About
+                </a>
+                <button onclick="showContents('about-dropdown')" id="about-dropdown-button"><i
+                        class="fa-solid fa-plus"></i></button>
+            </span>
+            <ul class="mobile-dropdown-content" id="about-dropdown">
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </div>
+        <div class="mobile-parent">
+            <span>
+                <a href="index.html#event">
+                    The Event
+                </a>
+                <button onclick="showContents('event-dropdown')" id="event-dropdown-button"><i
+                        class="fa-solid fa-plus"></i></button>
+            </span>
+            <ul class="mobile-dropdown-content" id="event-dropdown">
+                <li><a href="09-27-2022.html">09/27/2022 Recap</a></li>
+            </ul>
+        </div>
         <a href="index.html#get-involved">
             Get Involved
         </a>
@@ -149,45 +177,20 @@
                 </div>
             </div>
         </div>
-        <h1>History of the Calgary Pop-Up Care Village</h1>
         <div class="about-flex">
+            <video class="about-video" poster="assets/images/thumbnail.png" controls>
+                <source src="assets/ videos/Updated C-PUCV Promotional Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="about-text">
-                <video class="about-video" poster="assets/images/thumbnail.png"
-                    controls>
-                    <source src="assets/ videos/Updated C-PUCV Promotional Video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p>In August of 2021, Bill Zheng, then a grade 11 high school student and some high school friends
-                    stumbled upon LavaMae's Pop-Up Care Villages (PUCVs) in the San Francisco Bay Area - designed to
-                    bring services like showers, health care, clothing, and haircuts to the unhoused - and how
-                    accessible they were, they planned to launch one of their own in Calgary. </p>
-
-                <p>Unfortunately, given that they were not a non-profit organization and not connected to any vulnerable
-                    population serving agencies, the idea was shelved. </p>
-
-                <p>Come April of 2022, one of the Team Leads in the Grassroot Outreach Collaborative, Kristen
-                    Baranieski, brought up the idea of this Pop-Up Care Village to the table. Bill and Kristen quickly
-                    connected with Sam Reardon, Lead Program Consultant from LavaMae, and began coordinating the project
-                    as a collaborative effort from seven grassroot initiatives, including <a target="_blank"
-                        class="link" href="https://www.bethechangeyyc.org/">BeTheChangeYYC</a>, <a target="_blank"
-                        class="link" href="http://www.aawear.org/">AAWEAR</a>, <a target="_blank" class="link"
-                        href="https://www.facebook.com/AngelsInActionAIA/">Angels in
-                        Action</a>, <a target="_blank" class="link"
-                        href="https://www.facebook.com/groups/727357457935474/">Sobercrew/A.I.M</a>, <a target="_blank"
-                        class="link" href="https://www.facebook.com/HarvestHillsCaresCalgary/">Harvest Hill Cares</a>,
-                    and
-                    <a target="_blank" href="https://heartsforhumanityltd.com/" class="link">Hearts for Humanity</a>.
-                </p>
-
-                <p>Later on, Hanna Woodward, RSW, BeTheChangeYYC's program coordinator began taking over the lead of
-                    logistics and planning of the Calgary Pop-Up Care Village, alongside Bill Zheng. The two individuals
-                    formed a planning team and was able to hold the first successful event on September 27th, 2022.</p>
-
-                <p>The Calgary Pop-Up Care Village is really a festival for anyone experiencing systemic vulnerabilities
-                    such as homelessness, addiction, mental health issues, poverty, low-income, and more. The festival
-                    provides equitable access to basic services such as case management, healthcare, clothing, haircuts,
-                    food, and more to the community. This is a one-day event that upholds guests' inherent human
-                    dignity, and it bridges the wider Calgarian community with the underserved population.</p>
+                <h1>About The C-PUCV</h1>
+                <p>The Calgary Pop-Up Care Village is a festival for anyone experiencing systemic vulnerabilities such
+                    as homelessness, addiction, mental health issues, poverty, language and cultural barriers, and more.
+                    The festival provides equitable access to basic services such as case management, healthcare,
+                    clothing, haircuts, food, and more to the community. This is a one-day event that upholds guests'
+                    inherent human dignity, and it bridges the wider Calgarian community with the underserved
+                    population.</p>
+                <a class="button" href="history.html">Our History <i class="fa-sharp fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -208,59 +211,75 @@
 
         <button class="accordion free-stuff">Dignifying haircuts, manicures, massage therapy</button>
         <div class="panel">
-            <p>Our vendors MC College and CITCM will be employing students from both colleges to perform dignifying
-                haircuts, manicure, and massage therapy services free of charge. Both schools will have a certified
-                clinical supervisor and students who are gaining experiences in respective fields. Our guests will have
-                the opportunity to enjoy a refreshing hairstyle change, a relaxing massage therapy, and a beautifying
-                manicure. </p>
+            <p>Our partners from MC College, a group of Calgary based Registered Massage Therapists, and nursing
+                instructors from the University of Calgary will be employing students and qualified professionals to
+                perform dignifying haircuts, manicures, massage therapy services, as well as leading sessions of
+                meditation practices free of charge. Guests will have the opportunity to enjoy a refreshing hairstyle
+                change, a relaxing massage therapy, a beautifying manicure, as well as a stress-relieving meditation
+                session.</p>
         </div>
         <button class="accordion free-stuff">Refreshing food and drinks </button>
         <div class="panel">
-            <p>We are fortunate to have Boston Pizza who will be bringing fresh and hot pizza of various toppings from
-                12pm - 4pm of the event. In addition to the hot pizzas, our Grassroot Outreach Collaboration has
-                collected hundreds of non-perishable food items which can be accessed throughout the event. As well,
-                guests who complete exit booth surveys are eligible for a gift package containing non-perishable food
-                items and drinks, and random prize draws will also contain food items as well. Lastly, our partners have
-                brought gift cards from various restaurants across Calgary as an incentive for guests to interact with
-                their booth.</p>
+            <p>Kerby Centre will be kindly providing delicious food menu options including the Traditional Three Sisters
+                soup, Pea and Ham soup served with Garlic Toast, Kerby Burger, and more. Moreover, we have partnered up
+                with Boston Pizza to bring delicious, freshly prepared pizzas of various toppings to the event. Zero
+                Food Waste Foundation and several of our partners will also be offering non-perishable food items during
+                the festival for guests to access. Furthermore, guests have the opportunity to complete anonymous guest
+                surveys and enter random prize draws to obtain pre-packaged take-to-go food items as well. Lastly, our
+                partners have brought gift cards from various restaurants across Calgary as an incentive for guests to
+                interact with their booth.</p>
         </div>
         <button class="accordion free-stuff">Professional physical health checkups</button>
         <div class="panel">
-            <p>Our professional healthcare team will be able to assist guests with woundcares with paramedics onsite,
-                full-range STBBI testing with gift card incentives. The STI Health Clinic can also administer STBBI
-                treatment on-site as well as referrals to other professional health clinics in the city of Calgary for
-                follow ups. Safeworks will be bringing their iconic van for anyone wanting to access harm reduction
-                safer drug use supplies. Additionally, we have nurses available on site for vaccination administration,
-                including COVID-19 booster shots, as well as public health nurses representing 811 Healthlink informing
-                the guests of what services one can find by accessing 811. In addition, CUPS will be bringing Opioid
-                Agonist Treatment team for referrals as well as any relevant information on addiction clinics in the
-                city. Lastly, Safelink Alberta will be bringing case managers representing the agency with on-site
-                support of safer-sex supplies. </p>
+            <p>Our professional healthcare team will be able to assist guests with woundcares and other healthcare needs
+                with paramedics onsite, full-range STBBI testing with gift card incentives. The STI Health Clinic can
+                also administer STBBI treatment on-site as well as referrals to other professional health clinics in the
+                city of Calgary for follow ups. We are fortunate to have Medicine Shoppe Pharmacy pharmacy who will be
+                able to answer any questions regarding medication as well for newcomers, and AHS Safeworks will be
+                bringing their iconic van for anyone wanting to access harm reduction safer consumption supplies.
+                Additionally, we have nurses available on-site for vaccination administration, including COVID-19
+                booster shots, as well as public health nurses representing 811 Healthlink informing the guests of what
+                services one can find by accessing 811. In addition, we have partnered up with Pearle Vision from
+                Sunridge Mall to bring accessible eye care to the festival. Moreover, St. John Ambulance Canada will be
+                giving out nasal naloxone and offering training on opioid poisoning response at the event. Lastly,
+                SafeLink Alberta will be bringing case managers and outreach workers representing the agency with
+                on-site support of safer-sex supplies and HIV/HCV services.</p>
         </div>
         <button class="accordion free-stuff">Low barrier access to housing, employment, and low-income transit
             applications</button>
         <div class="panel">
-            <p>Our partners will provide on-site housing check-ins for guests who have previously completed the Calgary
+            <p>Our partners will provide on-site housing waitlist check-ins for guests who have completed the Calgary
                 Homeless Foundation Needs and Assessment Questionnaires (NSQ) documents, or complete one if the guest
                 has not done so previously. They will provide professional assistance in terms of providing financial
-                literacy course information, realistic employment coaching. As well, our City of Calgary Transit
-                Outreach Team will be able to complete Low-Income Transit Applications on-site with guests who need to
-                apply for such documents.</p>
+                literacy course information and employment opportunities. As well, our City of Calgary Transit
+                Community Outreach Team will be able to complete Low-Income Transit Applications on-site with guests who
+                need to apply for such documents. Lastly, per request of our guests, Calgary Legal Guidance and Mustard
+                Seed will be bringing their ID clinic to the festival for any guests to access.</p>
         </div>
         <button class="accordion free-stuff">On-site wellbeing and mental health checkups</button>
         <div class="panel">
-            <p>We have fully trained crisis intervention responders who are on-site with Distress Centre Calgary
-                available as a listening ear for anyone experiencing challenges and wanting to talk to someone. They
-                will also offer referrals to professional counselling services if guests need. Our indigeneous-based
-                partners will be performing drumming sessions as well as fostering cultural connections at the event.
+            <p>We have fully trained crisis intervention responders and addiction support specialists who are on-site
+                with Distress Centre Calgary, ECSSEN Career School, and Wood's Home available as a listening ear for
+                anyone experiencing challenges and wanting to talk to someone. They will also offer referrals to
+                professional counselling services if guests need. Our indigeneous-based partners will be performing
+                drumming sessions as well as fostering cultural connections at the event.
             </p>
+        </div>
+        <button class="accordion free-stuff">Youth and immigration support services</button>
+        <div class="panel">
+            <p>As a brand new addition to our festival, we have invited several youth serving and immigrant serving
+                agencies to provide services at our festival. Newcomers and refugees who are facing challenges
+                navigating the social service system in Canada can access our professional immigration services
+                professionals for further information and support. Lastly, Trellis and Calgary John Howard Society Youth
+                Service branch will be able to better assist youths who are in-need of wrap-around services,
+                anti-bullying support, and more.</p>
         </div>
         <button class="accordion free-stuff">Amazing entertainment and fun activities</button>
         <div class="panel">
-            <p>We have a team of professional entertainment groups who will be staffing the stage at all times during
-                the event, bringing free-style rap, indigeneous culture, and lastly just plain fun to the event. In
-                addition, we will be hosting random prize draws throughout the event and impromptu team activities for
-                any guests who are interested. </p>
+            <p>Our festival strives to provide numerous entertainment opportunities for our guests to interact with. We
+                have partnered up with PALS to have therapy dogs on-site for guests to pet and interact with
+                well-trained professional therapy dogs. As well, we will be bringing photo booths, free-style rapping,
+                indigeneous culture, and just plain fun to the event.</p>
         </div>
         <!-- <h4>
             Information Posters
@@ -296,13 +315,18 @@
             <div class="modal" id="volunteer-modal">
                 <button class="close"><i class="fa-solid fa-xmark"></i></button>
                 <h3>Current Openings</h1>
-                    <p> UCalgary Recovery Community Volunteers as well as UCalgary Nursing Students will receive co-curricular credits for time spent attending all mandatory trainings and volunteering for the festival. </p>
+                    <p> UCalgary Recovery Community Volunteers as well as UCalgary Nursing Students will receive
+                        co-curricular credits for time spent attending all mandatory trainings and volunteering for the
+                        festival. </p>
                     <button class="accordion" style="margin-top: 0">Data Collection Ambassadors</button>
                     <div class="panel">
                         <p>Summary</p>
-                        <p class="job-description">As a Data Collection and Analysis Specialist, you will work in a team of two to ensure accurate collection
-                            of surveys during the event for both our partners and guests (voluntary for guests). After the event, you
-                            will work collectively with the Team Lead to create and compile data for the Impact Report.</p>
+                        <p class="job-description">As a Data Collection and Analysis Specialist, you will work in a team
+                            of two to ensure accurate collection
+                            of surveys during the event for both our partners and guests (voluntary for guests). After
+                            the event, you
+                            will work collectively with the Team Lead to create and compile data for the Impact Report.
+                        </p>
                         <div style="display: flex; flex-wrap: wrap; margin: -7.5px">
                             <a target="_blank" href="assets/pdf/Data Collection Ambassadors.docx.pdf"
                                 class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
@@ -314,10 +338,14 @@
                     <button class="accordion">Hospitality Ambassador</button>
                     <div class="panel">
                         <p>Summary</p>
-                        <p class="job-description">Hospitality Ambassadors will work in a team of two (minimum) to carry out ‘radical hospitality’: putting
-                            extraordinary effort to make the guests feel welcome, to break down barriers that prevent people from
-                            participating, and to help people navigate the services and resources available. Ambassadors may patrol
-                            the event or work at entry/exit points or a central information booth. These volunteers also encourage
+                        <p class="job-description">Hospitality Ambassadors will work in a team of two (minimum) to carry
+                            out ‘radical hospitality’: putting
+                            extraordinary effort to make the guests feel welcome, to break down barriers that prevent
+                            people from
+                            participating, and to help people navigate the services and resources available. Ambassadors
+                            may patrol
+                            the event or work at entry/exit points or a central information booth. These volunteers also
+                            encourage
                             participation in activities and free raffles by giving out tickets to guests.</p>
                         <div style="display: flex; flex-wrap: wrap; margin: -7.5px">
                             <a target="_blank" href="assets/pdf/Hospitality Ambassadors.docx (1).pdf"
@@ -330,13 +358,16 @@
                     <button class="accordion">Medical Volunteers</button>
                     <div class="panel">
                         <p>Summary</p>
-                        <p class="job-description">Volunteers of the Medical First Response Central Team will respond to medical related issues alongside
-                            our St. John Ambulance Medical First Response partner. Volunteers will primarily be at the First Aid
-                            station and move about the event as needed. EMR , PCP, ACP designations or other similar medical
+                        <p class="job-description">Volunteers of the Medical First Response Central Team will respond to
+                            medical related issues alongside
+                            our St. John Ambulance Medical First Response partner. Volunteers will primarily be at the
+                            First Aid
+                            station and move about the event as needed. EMR , PCP, ACP designations or other similar
+                            medical
                             designations are required for this role.</p>
                         <div style="display: flex; flex-wrap: wrap; margin: -7.5px">
-                            <a target="_blank" href="assets/pdf/Medical Volunteers.docx.pdf"
-                                class="job-button"><i class="fa-solid fa-file-pdf"></i> View Full Details </a>
+                            <a target="_blank" href="assets/pdf/Medical Volunteers.docx.pdf" class="job-button"><i
+                                    class="fa-solid fa-file-pdf"></i> View Full Details </a>
                             <a target="_blank" href="https://forms.gle/2C3Y3AqjDWkENXGA8" class="job-button"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i> Apply </a>
                         </div>
@@ -345,13 +376,20 @@
                     <button class="accordion">Safety and Wellness Ambassadors</button>
                     <div class="panel">
                         <p>Summary</p>
-                        <p class="job-description">Safety and Wellness (SW) Ambassadors will work in a team of two (minimum) to ensure the general
-                            safety and cleanliness of the site is maintained during the event. SW Ambassadors will greet and share
-                            conversation with guests in a welcoming and positive manner and help ensure the personal security of
-                            everyone working and attending the event. Interactions can include noticing and de-escalating arising
-                            security issues during the event, calling for support as needed, and directing individuals to the Safework
-                            Safe Consumption Site when appropriate. SW Ambassadors will work with the Medical First Response
-                            team to ensure that individuals in medical distress are being properly looked after. In addition,
+                        <p class="job-description">Safety and Wellness (SW) Ambassadors will work in a team of two
+                            (minimum) to ensure the general
+                            safety and cleanliness of the site is maintained during the event. SW Ambassadors will greet
+                            and share
+                            conversation with guests in a welcoming and positive manner and help ensure the personal
+                            security of
+                            everyone working and attending the event. Interactions can include noticing and
+                            de-escalating arising
+                            security issues during the event, calling for support as needed, and directing individuals
+                            to the Safework
+                            Safe Consumption Site when appropriate. SW Ambassadors will work with the Medical First
+                            Response
+                            team to ensure that individuals in medical distress are being properly looked after. In
+                            addition,
                             Ambassadors will keep the event location clean and orderly, such as picking up trash.</p>
                         <div style="display: flex; flex-wrap: wrap; margin: -7.5px">
                             <a target="_blank" href="assets/pdf/Safety and Wellness Ambassadors.docx (1).pdf"
@@ -398,35 +436,28 @@
         </div>
     </div>
     <div class="container partners" id="partners">
-        <h1>Our Partners</h1>
+        <h1>Partners</h1>
         <p>This event would not be possible without our generous partners. If you are interesting in working with us,
             please contact us at <a class="link"
                 href="mailto:bill.zheng@bethechangeyyc.org">bill.zheng@bethechangeyyc.org</a> or <a class="link"
                 href="tel:403-477-7280">(403) 477-7280</a>.</p>
-        <h4>Donators and Funders</h4>
+        <h4>Sponsors</h4>
         <div class="swiper swiper1">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.calgary.ca/home.html"><img
-                            style="height: 100%; width: auto;" src="assets/images/sponsors/download.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.arusha.org/"><img
-                            style="height: 100%; width: auto;" src="assets/images/sponsors/Arusha+Side+by+Side.png"></a>
-                </div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.parksfdn.com/"><img
-                            style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/PFC+Logo+2015_COLOR+EDIT-Web.jpg"></a></div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank"
-                        href="https://m.facebook.com/BriansDisposal"><img style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/brian.jpg"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.girlguides.ca/web/"><img
-                            src="assets/images/sponsors/New Logo.jpg"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://communitywise.net/"><img
+                        href="https://calgaryfoundation.org/grantsawards-loans/types-of-grants/grassroots-grants/neighbour-grants-2/"><img
+                            style="height: 100%; width: auto;" src="assets/images/01-24-2023/partners/FCC.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://youthcentral.com/"><img
                             style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/communitywise-resource-centre-logo_thumbnail_en.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://therentalbrothers.com/"><img
+                            src="assets/images/01-24-2023/partners/Youth-Central-Black-PNG-site-icon.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.su.ucalgary.ca/"><img
                             style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/rental-brothers-logo.png"></a></div>
+                            src="assets/images/01-24-2023/partners/Loralindsay.jpg"></a>
+                </div>
             </div>
 
             <!-- If we need navigation buttons
@@ -443,48 +474,21 @@
                 <div class="swiper-slide swiper1-slide"><a target="_blank"
                         href="https://bostonpizza.com/en/index.html"><img
                             src="assets/images/sponsors/bostonpizza.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank"
-                        href="https://www.albertahealthservices.ca/services/page13737.aspx"><img
-                            style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/Alberta_Health_Services_Logo.png"></a></div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://safelinkalberta.ca/"><img
                             src="assets/images/sponsors/SafeLink-Logo_Cropped-01.png"></a></div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://sja.ca/en"><img
                             style="height: 100%; width: auto;"
                             src="assets/images/sponsors/St._John_Ambulance_Canada_Logo.svg.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://calgarydropin.ca/"><img
-                            style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/DI-Logo-Orange-reduced.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank"
-                        href="https://www.calgarytransit.com/home.html"><img style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/Calgary-Transit-Logo (1).svg">
-                    </a></div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.mccollege.ca/"><img
                             src="assets/images/sponsors/MC College Text WINN (Black)_1587139525.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.cupscalgary.com/"><img
-                            style="height: 100%; width: auto;" src="assets/images/sponsors/cups-logo.png"></a></div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://momentum.org/"><img
                             src="assets/images/sponsors/momentum.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://sorcecalgary.ca/"><img
-                            src="assets/images/sponsors/SCE_logo.png"></a></div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.prospectnow.ca/"><img
-                            src="assets/images/sponsors/prospect-logo.jpg"></a></div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.distresscentre.com/"><img
                             src="assets/images/sponsors/DC-logo-medium-transparency.png"></a>
-                </div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://alphahousecalgary.com/"><img
-                            style="height: 100%; width: auto;" src="assets/images/sponsors/alpha-logo.png"></a>
-                </div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://citcm.com/"><img
-                            style="height: 100%; width: auto;"
-                            src="assets/images/sponsors/cropped-small2-CITCM_WE.png"></a>
                 </div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank"
                         href="https://www.albertahealthservices.ca/info/page12630.aspx"><img
                             style="height: 100%; width: auto;" src="assets/images/sponsors/healthlink-logo.png"></a>
-                </div>
-                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://tribeartistsociety.com/"><img
-                            style="height: 100%; width: auto;" src="assets/images/sponsors/image02.png"></a>
                 </div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://iksook.ca/"><img
                             style="height: 100%; width: auto;"
@@ -499,107 +503,183 @@
                             src="assets/images/sponsors/received_1519053658530473.jpeg"></a>
                 </div>
                 <div class="swiper-slide swiper1-slide"><a target="_blank"
-                        href="https://www.facebook.com/independentwrestling2021/"><img
-                            style="height: 100%; width: auto;" src="assets/images/sponsors/canam.png"></a>
+                        href="https://www.facebook.com/AngelsInActionAIA/"><img style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/306171343_464691989037082_2234281522987533073_n.jpg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://harvesthillscares.ca/"><img
+                            style="height: 100%; width: auto;" src="assets/images/01-24-2023/partners/index.jpg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.calgaryfoodbank.com/"><img
+                            src="assets/images/01-24-2023/partners/CalgaryFoodBank_Logo.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank"
+                        href="https://www.facebook.com/yyc.zerowaste/"><img style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/zerofoodwaste.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.schizophrenia.ab.ca/"><img
+                            src="assets/images/01-24-2023/partners/SSALogo.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank"
+                        href="https://www.ucalgary.ca/safer-substance-use/ucrc"><img style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/UCalgary.svg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank"
+                        href="https://www.instagram.com/theliamprojectyyc/?hl=en"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/dark-blue-logo-1024x1024.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://immigrant-education.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/TIES-Websafe-Logo.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank"
+                        href="https://www.immigrantservicescalgary.ca/"><img style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/logo.svg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.calgary.ca/cps.html"><img
+                            style="height: 100%; width: auto;" src="assets/images/01-24-2023/partners/CPS-logo.svg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://resetcalgary.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/Reset-Formerly-SAS-Logo.jpg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.recoveryacres.org/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/197f86_a11722f9d2cf48adb1216ade49c1cd94~mv2.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://clg.ab.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/color-logo.svg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank"
+                        href="https://sunridgemall.net/stores/sunridgemall-sunridge-mall-pearle-vision"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/Pearle-Vision.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://medshoppe.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/MedShoppeLogoReverse.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank"
+                        href="https://www.albertahealthservices.ca/findhealth/Service.aspx?id=1001498"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/1200px-Alberta_Health_Services_Logo.svg.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.palspets.com/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/PALS_bwlogo.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.woodshomes.ca/"><img
+                            style="height: 100%; width: auto;" src="assets/images/01-24-2023/partners/Group.svg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://ecssen.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/new_ecssen_logo.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.risecalgary.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/RCRC_Logo_Colour.webp"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.goodwill.ab.ca/"><img
+                            src="assets/images/01-24-2023/partners/goodwill.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://ciwa-online.com/"><img
+                            src="assets/images/01-24-2023/partners/ciwa40years.gif"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.prospectnow.ca/"><img
+                            src="assets/images/01-24-2023/partners/logo_green.svg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://gatewayassociation.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/cropped-logogateweb.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.cjhs.ca/"><img
+                            src="assets/images/01-24-2023/partners/CJHSTitleBar.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank"
+                        href="https://www.salvationarmycalgary.org/"><img style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/giving-hope-today.webp"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://theseed.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/mustard-seed-logo.svg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://alphahousecalgary.com/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/alpha-logo.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.innfromthecold.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/innfromthecold.jpg"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.bethechangeyyc.org/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/bethechange.png"></a>
+                </div>
+                <div class="swiper-slide swiper1-slide"><a target="_blank" href="https://www.growwithtrellis.ca/"><img
+                            style="height: 100%; width: auto;"
+                            src="assets/images/01-24-2023/partners/trellis-society-logo.jpeg"></a>
                 </div>
             </div>
             <!-- If we need navigation buttons -->
             <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
         </div>
+
+        <h4>Collaborators</h4>
+        <p>The January 24th festival is brought by a partnership between <a class="link"
+                href="https://www.bethechangeyyc.org/">BeTheChangeYYC</a> X <a class="link"
+                href="https://safelinkalberta.ca/">SafeLink Alberta</a>, with extensive consultation with <a
+                class="link" href="https://lavamaex.org/">LavaMaeX</a>.</p>
     </div>
     <div class="container youth-leadership" id="team">
-        <h1>Grassroot Outreach Collaborative</h1>
-        <p>The C-PUCV is a collaborative project led by 7 grassroot initiatives. These seven organizations are:
-            BeTheChangeYYC, AAWEAR, Angels in Action, Sobercrew/A.I.M, Harvest Hill Cares, and Hearts
-            for Humanity.</p>
-
-        <div class="swiper swiper4">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide swiper4-slide"><a target="_blank" href="http://www.aawear.org/"><img
-                            src="assets/images/logos/aawear.png"></a></div>
-                <div class="swiper-slide swiper4-slide"><a target="_blank"
-                        href="https://www.facebook.com/groups/727357457935474/"><img
-                            src="assets/images/logos/aim.jpg"></a></div>
-                <div class="swiper-slide swiper4-slide"><a target="_blank"
-                        href="https://www.facebook.com/AngelsInActionAIA/"><img
-                            src="assets/images/logos/angelsinaction.png"></a></div>
-                <div class="swiper-slide swiper4-slide"><a target="_blank" href="https://www.bethechangeyyc.org/"><img
-                            src="assets/images/logos/bethechange.png"></a>
-                </div>
-                <div class="swiper-slide swiper4-slide"><a target="_blank"
-                        href="https://www.facebook.com/HarvestHillsCaresCalgary/"><img
-                            src="assets/images/logos/harvesthillscares.png"></a></div>
-                <div class="swiper-slide swiper4-slide"><a target="_blank" href="https://heartsforhumanityltd.com/"><img
-                            src="assets/images/logos/heartsforhumanity.jpg"></a>
-                </div>
-                <div class="swiper-slide swiper4-slide"><a target="_blank"
-                        href="https://www.facebook.com/groups/727357457935474/"><img
-                            src="assets/images/logos/sobercrew.png"></a></div>
-            </div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+        <h1>Team</h1>
         <div class="team-flex">
             <div>
-                <h4>Leadership Team</h4>
                 <ul>
                     <li>
                         <h5>Bill Zheng</h5>
-                        <p>Coordinator, Assistant Team Lead at BeTheChangeYYC</p>
+                        <p>Co-event Manager</p>
                     </li>
                     <li>
                         <h5>Hanna Woodward</h5>
-                        <p>Program Coordinator at BeTheChangeYYC</p>
-                    </li>
-                    <li>
-                        <h5>Chaz Smith</h5>
-                        <p>CEO and Founder of BeTheChangeYYC</p>
+                        <p>Co-event Manager</p>
                     </li>
                     <li>
                         <h5>Kristen Baranieski</h5>
-                        <p>Wayfinders and intake specialist team lead, senior team lead at BeTheChangeYYC</p>
+                        <p>Site & Equipmenmt coordinator</p>
                     </li>
                     <li>
-                        <h5>Olivia Levy</h5>
-                        <p>Medical first responder central team lead, team lead at BeTheChangeYYC</p>
+                        <h5>Amanda Geamanu</h5>
+                        <p>Marketing Coordinator</p>
                     </li>
                     <li>
-                        <h5>Jojo Marie</h5>
-                        <p>Safety and wellness ambassadors team lead, outreach coordinator at AAWEAR</p>
+                        <h5>Ivy Shi</h5>
+                        <p>Fundraising & Donations Coordinator</p>
                     </li>
-                </ul>
-            </div>
-            <div>
-                <h4>Youth Involvement</h4>
-                <ul>
+                    <li>
+                        <h5>Robyn Wanner</h5>
+                        <p>Volunteer Co-coordinator</p>
+                    </li>
+                    <li>
+                        <h5>Sherry Choma</h5>
+                        <p>Volunteer Co-coordinator</p>
+                    </li>
+                    <li>
+                        <h5>Anne Brown</h5>
+                        <p>Safety & Wellness and Medical Team Lead</p>
+                    </li>
+                    <li>
+                        <h5>Austin Deck</h5>
+                        <p>Data Collection Coordinator</p>
+                    </li>
                     <li>
                         <h5>Weilan Zhang</h5>
-                        <p>Graphic design team lead</p>
-                    </li>
-                    <li>
-                        <h5>Allison Yang</h5>
-                        <p>Graphic designer</p>
-                    </li>
-                    <li>
-                        <h5>Grace Song</h5>
-                        <p>Graphic designer</p>
-                    </li>
-                    <li>
-                        <h5>Grace Liu</h5>
-                        <p>Graphic designer</p>
-                    </li>
-                    <li>
-                        <h5>Alvi Zaman</h5>
-                        <p>Graphic designer</p>
+                        <p>Branding Specialist</p>
                     </li>
                     <li>
                         <h5>Ronald Jin</h5>
-                        <p>Web developer/designer</p>
+                        <p>Web Developer</p>
                     </li>
                 </ul>
             </div>
@@ -624,15 +704,9 @@
         <div>
             <span style="font-family: GlacialIndifference-B;">Related Organizations</span>
             <ul>
-                <li><a target="_blank" href="http://www.aawear.org/">AAWEAR</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/groups/727357457935474/">A.I.M.</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/AngelsInActionAIA/">Angels In Action</a></li>
                 <li><a target="_blank" href="https://www.bethechangeyyc.org/">BeTheChangeYYC</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/HarvestHillsCaresCalgary/">Harvest Hills
-                        Cares</a>
-                </li>
-                <li><a target="_blank" href="https://heartsforhumanityltd.com/">Hearts for Humanity</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/groups/727357457935474/">Sober Crew</a></li>
+                <li><a target="_blank" href="https://safelinkalberta.ca/">SafeLink Alberta</a></li>
+                <li><a target="_blank" href="https://lavamaex.org/">LavaMaeX</a></li>
             </ul>
         </div>
         <div>
