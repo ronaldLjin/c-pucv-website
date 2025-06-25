@@ -1,4 +1,4 @@
-let eventDate = new Date("Aug 21, 2024 10:00:00").getTime();
+let eventDate = new Date("Aug 21, 2025 10:00:00").getTime();
 
 let x = setInterval(function () {
 
