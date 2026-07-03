@@ -24,28 +24,37 @@ body {
   color: #212529;
   overflow-x: hidden;
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(1.9rem, 1.35rem + 2vw, 2.75rem);
+  line-height: 1.15;
+  margin: 0 0 24px;
   font-family: GlacialIndifference-B, sans-serif;
   color: rgba(199, 16, 46);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 1.75rem);
+  line-height: 1.2;
+  margin: 0 0 16px;
   font-family: GlacialIndifference-B, sans-serif;
   color: rgba(199, 16, 46);
 }
 
 h3 {
   font-size: 1.25rem;
+  line-height: 1.3;
   font-family: GlacialIndifference-B, sans-serif;
   color: rgba(199, 16, 46);
 }
 
 h4 {
   font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
   font-family: GlacialIndifference-B, sans-serif;
   color: rgba(199, 16, 46);
 }
@@ -53,11 +62,18 @@ h4 {
 h5 {
   font-family: GlacialIndifference, sans-serif;
   font-size: 1rem;
+  line-height: 1.4;
   color: rgba(199, 16, 46);
 }
 
 p {
   font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Constrain body copy to a comfortable reading measure. */
+.container > p {
+  max-width: 70ch;
 }
 
 button {
@@ -67,6 +83,7 @@ button {
 .link {
   text-decoration: none;
   color: #2fa5a8;
+  transition: color 0.2s ease;
 }
 
 .link:hover {
@@ -98,7 +115,9 @@ button {
 }
 
 .container {
-  padding: 50px 10vw 50px 10vw;
+  padding: clamp(48px, 5vw, 80px) 10vw;
+  /* Offset for the fixed navbar when jumping to #anchors. */
+  scroll-margin-top: 90px;
 }
 
 div {
@@ -137,24 +156,49 @@ div {
 .dropdown-content {
   background-color: white;
   position: absolute;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  display: none;
-  padding: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 8px 24px 0px;
+  padding: 8px;
   list-style: none;
-  top: 0;
+  top: 100%;
+  left: 0;
+  margin-top: 12px;
+  min-width: 190px;
+  border-radius: 12px;
   opacity: 0;
-  min-width: 100px;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
+}
+
+/* Invisible bridge so the menu stays open while moving from the label to it. */
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
 }
 
 .dropdown-content li a {
   color: rgba(199, 16, 46) !important;
   font-family: GlacialIndifference;
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: rgba(199, 16, 46, 0.08);
 }
 
 .nav-bar-links div:hover .dropdown-content {
-  display: block;
   opacity: 1;
-  transition: opacity 2s;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .nav-bar-links-mobile {
@@ -310,7 +354,7 @@ div {
 
 .about {
   width: 100vw;
-  background-color: #fafafa;
+  background-color: #faf7f8;
   position: relative;
 }
 
@@ -401,7 +445,7 @@ div {
 }
 
 .get-involved {
-  background-color: #fafafa;
+  background-color: #faf7f8;
 }
 
 .get-involved-flex {
@@ -414,9 +458,17 @@ div {
 .get-involved-flex .info-wrapper {
   width: 30%;
   height: fit-content;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   border-radius: 15px;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.get-involved-flex .info-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .get-involved-flex img {
@@ -428,24 +480,34 @@ div {
 
 .get-involved-flex .opportunity {
   width: 100%;
-  padding: 0 15px 60px 15px;
+  padding: 24px 22px 72px 22px;
   min-height: 250px;
 }
 
+.get-involved-flex .opportunity h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 .button {
-  padding: 10px;
+  padding: 11px 22px;
   color: white;
   background-color: rgba(199, 16, 46);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(199, 16, 46, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .button:hover {
   background-color: rgb(255, 27, 65);
-  transition: all 0.2s;
   text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(199, 16, 46, 0.3);
 }
 
 .get-involved-button {
@@ -481,7 +543,7 @@ div {
 }
 
 .youth-leadership {
-  background-color: #fafafa;
+  background-color: #faf7f8;
   color: #212529;
 }
 
@@ -569,7 +631,7 @@ div {
   margin: 10vh 10vw 10vh 10vw;
   z-index: 1001;
   border-radius: 15px;
-  padding: 15px;
+  padding: 28px;
   overflow-y: auto;
   display: none;
 }
@@ -615,12 +677,12 @@ div {
 }
 
 .accordion {
-  background-color: #e5e5e5;
+  background-color: rgba(199, 16, 46, 0.06);
   cursor: pointer;
   padding: 15px;
   width: 100%;
   text-align: left;
-  border: none;
+  border: 1px solid rgba(199, 16, 46, 0.12);
   outline: none;
   transition: 0.4s;
   font-family: GlacialIndifference, sans-serif;
@@ -632,7 +694,7 @@ div {
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: rgba(199, 16, 46, 0.13);
 }
 
 .panel {
@@ -644,17 +706,17 @@ div {
 
 .job-button {
   background-color: rgba(199, 16, 46);
-  padding: 10px;
+  padding: 10px 16px;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
   margin: 7.5px;
+  transition: background-color 0.2s ease;
 }
 
 .job-button:hover {
   background-color: rgb(255, 27, 65);
-  transition: background-color 0.2s;
 }
 
 .accordion:after {
@@ -868,21 +930,75 @@ video[poster] {
   margin: 5px 0 5px 0;
 }
 
-@media (max-width: 1100px) {
+/* Tablet: 2x2 grid with aligned icon columns and quadrant dividers. */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .event-info {
+    padding: 16px 40px;
+    /* Equal-height cells so the divider lines meet in a clean cross. */
+    align-items: stretch;
+  }
+
   .event-info-item {
     width: 50%;
+    justify-content: flex-start;
+    padding: 20px 28px;
     border-right: 0;
-    justify-content: center;
+  }
+
+  .event-info-item i {
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .event-info-item div {
+    margin-left: 18px;
+  }
+
+  /* vertical divider between the two columns */
+  .event-info-item:nth-child(odd) {
+    border-right: 2px solid rgba(199, 16, 46, 0.1);
+  }
+
+  /* horizontal divider between the two rows */
+  .event-info-item:nth-child(1),
+  .event-info-item:nth-child(2) {
+    border-bottom: 2px solid rgba(199, 16, 46, 0.1);
   }
 }
 
 @media (max-width: 700px) {
   .event-info {
     margin-top: -128px;
+    padding: 8px 24px;
   }
 
   .event-info-item {
     width: 100%;
+    justify-content: flex-start;
+    padding: 16px 0;
+    border-right: 0;
+    border-bottom: 2px solid rgba(199, 16, 46, 0.1);
+  }
+
+  .event-info-item:last-child {
+    border-bottom: 0;
+  }
+
+  /* Countdown has no icon — center it like a header. */
+  .event-info-item:first-child {
+    justify-content: center;
+  }
+
+  /* Fixed-width icon column so every row's text lines up. */
+  .event-info-item i {
+    width: 34px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .event-info-item div {
+    margin-left: 18px;
   }
 }
 
@@ -935,7 +1051,7 @@ mark {
 }
 
 .media-features {
-  background-color: #e5e5e5;
+  background-color: rgba(199, 16, 46, 0.06);
   width: 100%;
   border-radius: 15px;
   padding: 30px;
@@ -978,7 +1094,11 @@ mark {
 }
 
 .vendor-list li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+.vendor-list li::marker {
+  color: rgba(199, 16, 46, 0.6);
 }
 
 /* Tablet: reduce to 2 columns */

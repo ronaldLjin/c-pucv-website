@@ -66,11 +66,12 @@ export default function Footer() {
         </div>
       </footer>
       <div className="copyright">
-        ©2023 Calgary Pop-Up Care Village. Web design and development by{" "}
+        ©{new Date().getFullYear()} Calgary Pop-Up Care Village. Web design and
+        development by{" "}
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://ronald-jin.vercel.app/"
+          href="https://www.linkedin.com/in/ronald-jin/"
           style={{ color: "white" }}
         >
           Ronald Jin
