@@ -1,4 +1,6 @@
-let eventDate = new Date("Aug 21, 2025 10:00:00").getTime();
+// 10:00 AM Mountain Daylight Time (UTC-6) on Aug 21, 2026.
+// The explicit offset makes the countdown correct regardless of the visitor's timezone.
+let eventDate = new Date("2026-08-21T10:00:00-06:00").getTime();
 
 let x = setInterval(function () {
 
