@@ -38,9 +38,7 @@ export default function Modal({ open, onClose, title, children }) {
         style={{ display: "block" }}
       ></div>
       <div
-        className={`modal animate__animated ${
-          closing ? "animate__slideOutDown" : "animate__slideInUp"
-        } animate__faster`}
+        className={`modal ${closing ? "modal-out" : "modal-in"}`}
         style={{ display: "block" }}
       >
         <button className="close" onClick={handleClose}>

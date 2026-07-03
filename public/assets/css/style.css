@@ -646,6 +646,34 @@ div {
   display: none;
 }
 
+/* Slide the whole modal in from / out past the bottom of the viewport,
+   independent of the modal's own height. */
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalSlideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+.modal-in {
+  animation: modalSlideUp 0.4s ease both;
+}
+
+.modal-out {
+  animation: modalSlideDown 0.4s ease both;
+}
+
 .close {
   position: absolute;
   right: 15px;
