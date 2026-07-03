@@ -13,6 +13,15 @@
   src: url("../fonts/GlacialIndifference-Bold.otf") format("opentype");
 }
 
+:root {
+  /* Content is capped at this width and centered; only backgrounds go
+     full-bleed. The gutter stays at 10vw until the viewport is wide enough
+     that centering the max-width produces a larger margin. */
+  --content-max: 1280px;
+  --gutter: 10vw;
+  --content-pad: max(var(--gutter), calc((100% - var(--content-max)) / 2));
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -115,7 +124,7 @@ button {
 }
 
 .container {
-  padding: clamp(48px, 5vw, 80px) 10vw;
+  padding: clamp(48px, 5vw, 80px) var(--content-pad);
   /* Offset for the fixed navbar when jumping to #anchors. */
   scroll-margin-top: 90px;
 }
@@ -125,7 +134,7 @@ div {
 }
 
 .nav-bar {
-  padding: 15px 10vw 15px 10vw;
+  padding: 15px var(--content-pad);
   position: fixed;
   top: 0;
   display: flex;
@@ -625,10 +634,11 @@ div {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   background-color: white;
-  height: 80vh;
-  width: 80vw;
-  margin: 10vh 10vw 10vh 10vw;
+  max-height: 80vh;
+  width: min(90vw, 640px);
+  margin: 12vh auto;
   z-index: 1001;
   border-radius: 15px;
   padding: 28px;
@@ -827,7 +837,7 @@ footer li {
 }
 
 .copyright {
-  padding: 15px 10vw 15px 10vw;
+  padding: 15px var(--content-pad);
   font-size: 1rem;
   border-top: 1px solid rgba(199, 16, 46, 0.5);
   background-color: rgba(99, 8, 22, 1);

@@ -121,7 +121,7 @@ export default function RecapJan2023() {
     <>
       <BannerCarousel images={BANNER} header="JANUARY 2023" />
 
-      <div className="container" style={{ backgroundColor: "#fafafa" }}>
+      <div className="container" style={{ backgroundColor: "#faf7f8" }}>
         <h1>Impact</h1>
         <p>
           The second Calgary Pop-Up Care Village took place on January 24th, 2023
@@ -152,7 +152,7 @@ export default function RecapJan2023() {
         </div>
       </div>
 
-      <div className="container" style={{ backgroundColor: "#fafafa" }}>
+      <div className="container" style={{ backgroundColor: "#faf7f8" }}>
         <h1>Statistics</h1>
         <Charts />
       </div>
@@ -175,7 +175,7 @@ export default function RecapJan2023() {
       <div
         className="container partners"
         id="partners"
-        style={{ backgroundColor: "#fafafa" }}
+        style={{ backgroundColor: "#faf7f8" }}
       >
         <h1>Partners</h1>
         <p>

@@ -17,7 +17,7 @@ export default function History() {
     <>
       <BannerCarousel images={IMAGES} header="Our History" />
 
-      <div className="container" style={{ backgroundColor: "#fafafa" }}>
+      <div className="container" style={{ backgroundColor: "#faf7f8" }}>
         <h1>History of the Calgary Pop-Up Care Village</h1>
         <div className="about-flex">
           <div>

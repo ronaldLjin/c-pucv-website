@@ -94,7 +94,7 @@ export default function RecapSep2022() {
     <>
       <BannerCarousel images={BANNER} header="SEPTEMBER 2022" />
 
-      <div className="container" style={{ backgroundColor: "#fafafa" }}>
+      <div className="container" style={{ backgroundColor: "#faf7f8" }}>
         <h1>Impact</h1>
         <p>
           The first Calgary Pop-Up Care Village took place on September 27th,
@@ -152,7 +152,7 @@ export default function RecapSep2022() {
       <div
         className="container partners"
         id="partners"
-        style={{ backgroundColor: "#fafafa" }}
+        style={{ backgroundColor: "#faf7f8" }}
       >
         <h1>September 2022 Partners</h1>
         <p>
