@@ -1,0 +1,86 @@
+.indigenous-event {
+  background: #f28c28;
+  color: #301b10;
+}
+
+.indigenous-event h1,
+.indigenous-event h2,
+.indigenous-event h3 { color: inherit; }
+
+.indigenous-hero {
+  padding-top: 170px;
+  padding-bottom: 130px;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  align-items: center;
+  gap: 60px;
+  background: linear-gradient(180deg, #713208 0, #f28c28 190px);
+}
+
+.indigenous-hero-copy { max-width: 650px; }
+.indigenous-hero h1 { text-transform: uppercase; }
+.indigenous-eyebrow { font-family: GlacialIndifference-B, sans-serif; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
+.indigenous-intro { font-size: 1.4rem; }
+.indigenous-event .button { background: #301b10; color: white; box-shadow: none; margin-top: 12px; }
+.indigenous-event .button:hover { background: #54301c; }
+.indigenous-event a:focus-visible { outline: 3px solid #301b10; outline-offset: 5px; }
+.indigenous-day { text-align: center; background: #fff8ef; border: 1px solid #301b1020; padding: 30px; border-radius: 15px; box-shadow: 0 6px 24px rgb(48 27 16 / 8%); }
+.indigenous-day > span { display: block; font-size: 1.25rem; }
+.indigenous-day strong { display: block; font-family: GlacialIndifference-B, sans-serif; font-size: clamp(5rem, 10vw, 9rem); line-height: 1.1; }
+.indigenous-day p { border-top: 1px solid #301b1040; padding-top: 20px; margin-bottom: 0; }
+.indigenous-visit { position: relative; padding-bottom: 0; background: #fff8ef; }
+.indigenous-visit .event-info { margin-bottom: 0; }
+.indigenous-event .event-info {
+  --event-info-accent: #301b10;
+  --event-info-icon: #a6470c;
+  --event-info-divider: #301b1020;
+}
+.indigenous-event #countdown div,
+.indigenous-event #countdown h4 { color: #301b10; }
+.indigenous-event .event-info a { color: #853707; text-underline-offset: 4px; }
+.indigenous-service-grid article { padding: 24px 22px; min-width: 0; color: #212529; }
+.indigenous-event .care-card h3 { color: #301b10; }
+.indigenous-culture { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 50px; background: #fff8ef; }
+.indigenous-culture figure { margin: 0; min-width: 0; }
+.indigenous-culture img { display: block; width: 100%; height: auto; border-radius: 15px; }
+.indigenous-culture figcaption { font-size: .85rem; line-height: 1.5; margin-top: 12px; }
+.indigenous-services { background: #fce6cd; }
+.indigenous-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 30px; }
+.indigenous-service-grid h3 { margin-top: 0; }
+.indigenous-service-grid p { margin-bottom: 0; }
+
+/* Keep the shared navigation and footer in the event's warm palette. */
+.indigenous-theme .nav-bar:has(.red-button) .logo {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(22%) saturate(1586%) hue-rotate(341deg) brightness(96%) contrast(94%);
+}
+.indigenous-theme .nav-bar:has(.red-button) .menu-item,
+.indigenous-theme .dropdown-content li a,
+.indigenous-theme .nav-bar-links-mobile a,
+.indigenous-theme .nav-bar-links-mobile div,
+.indigenous-theme .mobile-parent button,
+.indigenous-theme #close-nav {
+  color: #301b10 !important;
+}
+.indigenous-theme .nav-bar-links .donate-button { color: #301b10; }
+.indigenous-theme .nav-bar-links .red-button,
+.indigenous-theme .nav-bar-links-mobile .donate-button {
+  background-color: #301b10 !important;
+  color: white !important;
+}
+.indigenous-theme .dropdown-content li a:hover { background-color: #fff0dc; }
+.indigenous-theme footer,
+.indigenous-theme .copyright { background-color: #301b10; }
+.indigenous-theme .copyright { border-top-color: #ffffff26; }
+
+@media (max-width: 1000px) {
+  .indigenous-hero { gap: 30px; }
+  .indigenous-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .indigenous-culture { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 600px) {
+  .indigenous-hero { grid-template-columns: 1fr; padding-top: 140px; padding-bottom: 130px; }
+  .indigenous-day { padding: 24px; }
+  .indigenous-day strong { font-size: 5rem; }
+  .indigenous-service-grid { grid-template-columns: 1fr; }
+}

@@ -77,6 +77,9 @@ export default function Navbar() {
             </Link>
             <ul className="dropdown-content">
               <li>
+                <Link to="/indigenous-pop-up-care-village">Indigenous Care Village · 2026</Link>
+              </li>
+              <li>
                 <Link to="/01-24-2023">01/24/2023 Recap</Link>
               </li>
               <li>
@@ -150,6 +153,11 @@ export default function Navbar() {
                   eventOpen ? " mobile-dropdown-content-active" : ""
                 }`}
               >
+                <li>
+                  <Link to="/indigenous-pop-up-care-village" onClick={closeMenu}>
+                    Indigenous Care Village · 2026
+                  </Link>
+                </li>
                 <li>
                   <Link to="/01-24-2023" onClick={closeMenu}>
                     01/24/2023 Recap

@@ -33,6 +33,9 @@ export default function Footer() {
               <a href="/#event">The Event</a>
             </li>
             <li>
+              <a href="/indigenous-pop-up-care-village">Indigenous Care Village</a>
+            </li>
+            <li>
               <a href="/#get-involved">Get Involved</a>
             </li>
             <li>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import EventInfo, { EventInfoItem } from "../components/EventInfo.jsx";
 import Countdown from "../components/Countdown.jsx";
 import Accordion from "../components/Accordion.jsx";
 import Modal from "../components/Modal.jsx";
@@ -131,50 +132,37 @@ export default function Home() {
           </p>
           <Link
             className="button"
-            style={{ marginTop: "15px", boxShadow: "0px 0px 20px #000000" }}
+            style={{ marginTop: "15px", marginRight: "12px", boxShadow: "0px 0px 20px #000000" }}
             to="/01-24-2023"
           >
             Latest Event Recap <i className="fa-sharp fa-solid fa-arrow-right"></i>
+          </Link>
+          <Link
+            className="button"
+            style={{ marginTop: "15px", boxShadow: "0px 0px 20px #000000" }}
+            to="/indigenous-pop-up-care-village"
+          >
+            Indigenous Care Village · September 30
           </Link>
         </div>
       </div>
 
       <div className="container about" id="about">
-        <div className="event-info">
-          <div className="event-info-item">
-            <Countdown />
-          </div>
-          <div className="event-info-item">
-            <i
-              className="fa-solid fa-location-dot"
-              style={{ color: "rgba(199, 16, 46, 0.5)" }}
-            ></i>
-            <div>
-              <h3 style={{ fontSize: "12pt" }}>Central Memorial Park</h3>
-              <p>1221 2 St SW</p>
-            </div>
-          </div>
-          <div className="event-info-item">
-            <i
-              className="fa-solid fa-calendar-days"
-              style={{ color: "rgba(199, 16, 46, 0.5)" }}
-            ></i>
-            <div>
-              <h3>August 21, 2026</h3>
-              <p>10 AM - 4 PM (MT)</p>
-            </div>
-          </div>
-          <div className="event-info-item">
-            <i
-              className="fa-solid fa-users"
-              style={{ color: "rgba(199, 16, 46, 0.5)" }}
-            ></i>
-            <div>
-              <h3>600+ guests</h3>
-              <p>At each event</p>
-            </div>
-          </div>
-        </div>
+        <EventInfo>
+          <EventInfoItem><Countdown /></EventInfoItem>
+          <EventInfoItem icon="fa-location-dot">
+            <h3 style={{ fontSize: "12pt" }}>Central Memorial Park</h3>
+            <p>1221 2 St SW</p>
+          </EventInfoItem>
+          <EventInfoItem icon="fa-calendar-days">
+            <h3>August 21, 2026</h3>
+            <p>10 AM - 4 PM (MT)</p>
+          </EventInfoItem>
+          <EventInfoItem icon="fa-users">
+            <h3>600+ guests</h3>
+            <p>At each event</p>
+          </EventInfoItem>
+        </EventInfo>
         <div className="about-flex">
           <video className="about-video" controls>
             <source
@@ -225,7 +213,7 @@ export default function Home() {
       <div className="container get-involved" id="get-involved">
         <h1>Get Involved</h1>
         <div className="get-involved-flex">
-          <div className="info-wrapper">
+          <div className="info-wrapper care-card">
             <img src="/assets/images/volunteer.jpg" alt="Volunteers" />
             <div className="opportunity">
               <h4>VOLUNTEER</h4>
@@ -243,7 +231,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="info-wrapper">
+          <div className="info-wrapper care-card">
             <img src="/assets/images/partner.jpg" alt="Partner with us" />
             <div className="opportunity">
               <h4>PARTNER WITH US</h4>
@@ -261,7 +249,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="info-wrapper">
+          <div className="info-wrapper care-card">
             <img src="/assets/images/donate.jpg" alt="Donate" />
             <div className="opportunity">
               <h4>DONATE</h4>

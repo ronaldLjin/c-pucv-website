@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 const EVENT_TIME = new Date("2026-08-21T10:00:00-06:00").getTime();
 const EVENT_DURATION_MS = 6 * 60 * 60 * 1000; // 10 AM - 4 PM
 
-function getState() {
-  const distance = EVENT_TIME - Date.now();
+function getState(eventTime) {
+  const distance = eventTime - Date.now();
   if (distance <= 0 && distance > -EVENT_DURATION_MS) {
     return { status: "open" };
   }
@@ -22,19 +22,20 @@ function getState() {
   };
 }
 
-export default function Countdown() {
-  const [state, setState] = useState(getState);
+export default function Countdown({ eventTime = EVENT_TIME, endedMessage = "The event is over. See you next year!" }) {
+  const [state, setState] = useState(() => getState(eventTime));
 
   useEffect(() => {
-    const id = setInterval(() => setState(getState()), 1000);
+    setState(getState(eventTime));
+    const id = setInterval(() => setState(getState(eventTime)), 1000);
     return () => clearInterval(id);
-  }, []);
+  }, [eventTime]);
 
   if (state.status === "open") {
     return <div id="countdown">Come drop by, We are open!</div>;
   }
   if (state.status === "over") {
-    return <div id="countdown">The event is over. See you next year!</div>;
+    return <div id="countdown">{endedMessage}</div>;
   }
 
   return (
