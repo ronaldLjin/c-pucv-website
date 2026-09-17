@@ -159,8 +159,8 @@ export default function RecapSep2022() {
           This event would not have been possible without our generous partners.
           If you are interesting in working with us in the future, please contact
           us at{" "}
-          <a className="link" href="mailto:billzheng2147@gmail.com">
-            billzheng2147@gmail.com
+          <a className="link" href="mailto:bill@radicalgary.ca">
+            bill@radicalgary.ca
           </a>
           .
         </p>

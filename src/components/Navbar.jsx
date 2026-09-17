@@ -53,7 +53,7 @@ export default function Navbar() {
   return (
     <>
       <div className="nav-bar" style={navStyle}>
-        <Link to="/#banner">
+        <Link to="/">
           <img
             src={logoSrc}
             alt="Calgary Pop-Up Care Village Logo"
@@ -62,22 +62,15 @@ export default function Navbar() {
         </Link>
         <div className="nav-bar-links">
           <div>
-            <Link className="menu-item" style={{ color: menuColor }} to="/#about">
-              About <i className="fa-solid fa-chevron-down"></i>
+            <Link className="menu-item" style={{ color: menuColor }} to="/calgary-pop-up-care-village">
+              Calgary Pop-Up Care Village <i className="fa-solid fa-chevron-down"></i>
             </Link>
             <ul className="dropdown-content">
+              <li>
+                <Link to="/calgary-pop-up-care-village#about">About</Link>
+              </li>
               <li>
                 <Link to="/history">History</Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <Link className="menu-item" style={{ color: menuColor }} to="/#event">
-              The Event <i className="fa-solid fa-chevron-down"></i>
-            </Link>
-            <ul className="dropdown-content">
-              <li>
-                <Link to="/indigenous-pop-up-care-village">Indigenous Care Village · 2026</Link>
               </li>
               <li>
                 <Link to="/01-24-2023">01/24/2023 Recap</Link>
@@ -87,10 +80,20 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <Link className="menu-item" style={{ color: menuColor }} to="/#get-involved">
+          <div>
+            <Link className="menu-item" style={{ color: menuColor }} to="/">
+              Indigenous Pop-Up Care Village <i className="fa-solid fa-chevron-down"></i>
+            </Link>
+            <ul className="dropdown-content">
+              <li>
+                <Link to="/#visit">Plan your visit · September 30</Link>
+              </li>
+            </ul>
+          </div>
+          <Link className="menu-item" style={{ color: menuColor }} to="/calgary-pop-up-care-village#get-involved">
             Get Involved
           </Link>
-          <Link className="menu-item" style={{ color: menuColor }} to="/#partners">
+          <Link className="menu-item" style={{ color: menuColor }} to="/calgary-pop-up-care-village#partners">
             Our Partners
           </Link>
           <a
@@ -120,8 +123,8 @@ export default function Navbar() {
             </button>
             <div className="mobile-parent">
               <span>
-                <Link to="/#about" onClick={closeMenu}>
-                  About
+                <Link to="/calgary-pop-up-care-village" onClick={closeMenu}>
+                  Calgary Pop-Up Care Village
                 </Link>
                 <button onClick={() => setAboutOpen((v) => !v)}>
                   <i className={`fa-solid ${aboutOpen ? "fa-xmark" : "fa-plus"}`}></i>
@@ -133,29 +136,13 @@ export default function Navbar() {
                 }`}
               >
                 <li>
-                  <Link to="/history" onClick={closeMenu}>
-                    History
+                  <Link to="/calgary-pop-up-care-village#about" onClick={closeMenu}>
+                    About
                   </Link>
                 </li>
-              </ul>
-            </div>
-            <div className="mobile-parent">
-              <span>
-                <Link to="/#event" onClick={closeMenu}>
-                  The Event
-                </Link>
-                <button onClick={() => setEventOpen((v) => !v)}>
-                  <i className={`fa-solid ${eventOpen ? "fa-xmark" : "fa-plus"}`}></i>
-                </button>
-              </span>
-              <ul
-                className={`mobile-dropdown-content${
-                  eventOpen ? " mobile-dropdown-content-active" : ""
-                }`}
-              >
                 <li>
-                  <Link to="/indigenous-pop-up-care-village" onClick={closeMenu}>
-                    Indigenous Care Village · 2026
+                  <Link to="/history" onClick={closeMenu}>
+                    History
                   </Link>
                 </li>
                 <li>
@@ -170,10 +157,31 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-            <Link to="/#get-involved" onClick={closeMenu}>
+            <div className="mobile-parent">
+              <span>
+                <Link to="/" onClick={closeMenu}>
+                  Indigenous Pop-Up Care Village
+                </Link>
+                <button onClick={() => setEventOpen((v) => !v)}>
+                  <i className={`fa-solid ${eventOpen ? "fa-xmark" : "fa-plus"}`}></i>
+                </button>
+              </span>
+              <ul
+                className={`mobile-dropdown-content${
+                  eventOpen ? " mobile-dropdown-content-active" : ""
+                }`}
+              >
+                <li>
+                  <Link to="/#visit" onClick={closeMenu}>
+                    Plan your visit · September 30
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <Link to="/calgary-pop-up-care-village#get-involved" onClick={closeMenu}>
               Get Involved
             </Link>
-            <Link to="/#partners" onClick={closeMenu}>
+            <Link to="/calgary-pop-up-care-village#partners" onClick={closeMenu}>
               Our Partners
             </Link>
             <a

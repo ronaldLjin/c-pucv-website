@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./IndigenousCareVillage.css";
 import Countdown from "../components/Countdown.jsx";
 import EventInfo, { EventInfoItem } from "../components/EventInfo.jsx";
@@ -26,6 +27,7 @@ export default function IndigenousCareVillage() {
           <p className="indigenous-intro">A day of care, culture, and connection.</p>
           <p>Free healthcare, food, clothing, social services, and Indigenous cultural supports for Indigenous people experiencing homelessness and poverty.</p>
           <a className="button" href="#visit">Plan your visit <i className="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <p className="indigenous-other-events">Learn about our other events at the <Link to="/calgary-pop-up-care-village">Calgary Pop-Up Care Village <span aria-hidden="true">→</span></Link></p>
         </div>
         <div className="indigenous-day">
           <span>September</span>

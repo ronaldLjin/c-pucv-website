@@ -1,19 +1,7 @@
-import { useLocation } from "react-router-dom";
-
-const HOME_ORGS = [{ label: "LavaMaeX", href: "https://lavamaex.org/" }];
-
-const FULL_ORGS = [
-  { label: "BeTheChangeYYC", href: "https://www.bethechangeyyc.org/" },
-  { label: "SafeLink Alberta", href: "https://safelinkalberta.ca/" },
-  { label: "LavaMaeX", href: "https://lavamaex.org/" },
-];
+const ORGS = [{ label: "LavaMaeX", href: "https://lavamaex.org/" }];
+const email = "bill@radicalgary.ca";
 
 export default function Footer() {
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
-  const orgs = isHome ? HOME_ORGS : FULL_ORGS;
-  const email = isHome ? "c-pucv@radicalgary.ca" : "billzheng2147@gmail.com";
-
   return (
     <>
       <footer className="container">
@@ -27,19 +15,16 @@ export default function Footer() {
           <span style={{ fontFamily: "GlacialIndifference-B" }}>Navigation</span>
           <ul>
             <li>
-              <a href="/#about">About</a>
+              <a href="/calgary-pop-up-care-village">Calgary Pop-Up Care Village</a>
             </li>
             <li>
-              <a href="/#event">The Event</a>
+              <a href="/">Indigenous Pop-Up Care Village</a>
             </li>
             <li>
-              <a href="/indigenous-pop-up-care-village">Indigenous Care Village</a>
+              <a href="/calgary-pop-up-care-village#get-involved">Get Involved</a>
             </li>
             <li>
-              <a href="/#get-involved">Get Involved</a>
-            </li>
-            <li>
-              <a href="/#partners">Our Partners</a>
+              <a href="/calgary-pop-up-care-village#partners">Our Partners</a>
             </li>
           </ul>
         </div>
@@ -48,7 +33,7 @@ export default function Footer() {
             Related Organizations
           </span>
           <ul>
-            {orgs.map((o) => (
+            {ORGS.map((o) => (
               <li key={o.href}>
                 <a target="_blank" rel="noreferrer" href={o.href}>
                   {o.label}

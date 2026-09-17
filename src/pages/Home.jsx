@@ -140,9 +140,9 @@ export default function Home() {
           <Link
             className="button"
             style={{ marginTop: "15px", boxShadow: "0px 0px 20px #000000" }}
-            to="/indigenous-pop-up-care-village"
+            to="/"
           >
-            Indigenous Care Village · September 30
+            Indigenous Pop-Up Care Village · September 30
           </Link>
         </div>
       </div>
@@ -291,10 +291,10 @@ export default function Home() {
           <a
             className="job-button"
             style={{ marginBottom: "30px" }}
-            href="mailto:c-pucv@radicalgary.ca"
+            href="mailto:bill@radicalgary.ca"
           >
             <i className="fa-solid fa-envelope-circle-check"></i>{" "}
-            c-pucv@radicalgary.ca
+            bill@radicalgary.ca
           </a>
         </div>
       </Modal>
@@ -304,8 +304,8 @@ export default function Home() {
         <p>
           This event would not be possible without our generous partners. If you
           are interesting in working with us, please contact us at{" "}
-          <a className="link" href="mailto:c-pucv@radicalgary.ca">
-            c-pucv@radicalgary.ca
+          <a className="link" href="mailto:bill@radicalgary.ca">
+            bill@radicalgary.ca
           </a>
           .
         </p>

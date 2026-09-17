@@ -181,8 +181,8 @@ export default function RecapJan2023() {
         <p>
           This event would not be possible without our generous partners. If you
           are interesting in working with us, please contact us at{" "}
-          <a className="link" href="mailto:billzheng2147@gmail.com">
-            billzheng2147@gmail.com
+          <a className="link" href="mailto:bill@radicalgary.ca">
+            bill@radicalgary.ca
           </a>
           .
         </p>

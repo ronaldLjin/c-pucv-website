@@ -25,7 +25,7 @@ function ScrollManager() {
 
 export default function Layout() {
   const { pathname } = useLocation();
-  const isIndigenousEvent = pathname.replace(/\/$/, "") === "/indigenous-pop-up-care-village";
+  const isIndigenousEvent = pathname === "/";
   return (
     <div className={isIndigenousEvent ? "indigenous-theme" : undefined}>
       <ScrollManager />

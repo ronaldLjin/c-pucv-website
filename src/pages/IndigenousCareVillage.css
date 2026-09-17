@@ -20,6 +20,8 @@
 .indigenous-hero-copy { max-width: 650px; }
 .indigenous-hero h1 { text-transform: uppercase; }
 .indigenous-eyebrow { font-family: GlacialIndifference-B, sans-serif; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
+.indigenous-other-events { margin-top: 24px; }
+.indigenous-other-events a { color: inherit; text-decoration: underline; text-underline-offset: 4px; font-family: GlacialIndifference-B, sans-serif; }
 .indigenous-intro { font-size: 1.4rem; }
 .indigenous-event .button { background: #301b10; color: white; box-shadow: none; margin-top: 12px; }
 .indigenous-event .button:hover { background: #54301c; }
